@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercitiu input 2</title>
+</head>
+
+<body>
+    <form action=/action_page.php">
+        <div><label for="gender">Gender:</label><br>
+
+            <input type="radio" name="male" gender="male">
+            <label for="male">Male</label>
+            <input type="radio" name="female" gender="female">
+            <label for="female">Female</label>
+            <input type="radio" name="both" gender="both">
+            <label for="both">Both</label>
+        </div><br>
+        <div>
+            <div>
+                <p>First name:</p>
+                <input type="text" name="first name" required>
+                <br>
+                <p>last name:</p>
+                <input type="text" name="last name" required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" required>
+                <br>
+                <label for="phone">phone number:</label><br>
+
+                <input type="tel" name="phone" required>
+                <br>
+                <label for="email">Email:</label><br>
+
+                <input type="email" name="Email"><br>
+                <label for="password">Password:</label><br>
+
+                <input type="password" name="password" required>
+                <br>
+                <label for="location">City:</label><br>
+            </div>
+            <div> <select id="location">
+                    <option value="iasi"> Iasi</option>
+                    <option value="bacau"> bacau</option>
+                    <option value="pascani"> pascani</option>
+                    <option value="vaslui"> vaslui</option>
+
+                </select></div><br>
+
+            <div> <input type="checkbox"> I agree to the <a href="aa">terms and conditions</a><br>
+
+                <input type="submit" value="Sign up">
+                <button type="reset">reset form</button></div>
+
+    </form>
+</body>
+
+</html>
