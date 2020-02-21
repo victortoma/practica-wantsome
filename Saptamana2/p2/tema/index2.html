@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Exercitiu tema 2
+    </title>
+</head>
+
+<body>
+   <form action="/action_page.php?">
+     <h2>Formular de calatorie</h2>
+     <p style="font-size:15px;">*campuri obligatorii</p>
+
+    <div>
+        <label for="Id">Nume Prenume*:</label><br>
+
+        <input type="text" id="Id" name="Nume" placeholder="Nume Prenume" required>
+    </div><br>
+
+    <div>
+        <label for="email">Adresa Email:*</label><br>
+
+        <input type="email" id="email" placeholder="Adresa Email" required>
+    </div><br>
+
+    <div>
+        <label for="pachet">Alege pachetul:*</label> <br>
+        <select id="pachet" required>
+            <option value="mega pachet" checked>Mega pachet</option>
+            <option value="super pachet">super pachet</option>
+            <option value="cel mai pachet">cel mai pachet</option>
+            <option value="nicun pachet">niciun pachet</option>
+        </select></div><br>
+
+    <div>
+        <label for="data">Data plecarii:*</label><br>
+
+        <input type="date" id="data" value="2020-06-25" min="2020-02-20" max="2020-07-21" required>
+    </div><br>
+
+    <div>
+        <label for="bilete">Numar bilete:*</label><br>
+        <input id="bilete" type="text" pattern="[0-9]{1}" value="1" min="1" required>
+    </div><br>
+
+    <div>   
+        <label for="cupon">Cupon reducere</label><br>
+    
+        <input id ="cupon" type="text" maxlength="8" placeholder="Reducere">
+    </div><br>
+
+    <div><label for="preferinte">Preferinte:</label> <br>
+        <input id="preferinte" type="checkbox" value="muzica">Muzica
+        <input id="preferinte" type="checkbox" value="mancare">Mancare<br>
+        <input id="preferinte" type="checkbox" value="pescuit">Pescuit
+        <input id="preferinte" type="checkbox" value="navigare">Navigare
+    </div><br>
+
+    <div>
+        <label for="terms">Termeni si Conditii:*</label><br>
+        <input id="terms" type="radio" value="agree" checked required>Sunt de acord
+        <input id="terms" type="radio" value="disagree">Nu-s
+    </div><br>
+
+    <div>
+        <input type="submit" Value="Imbarcarea">
+    </div>
+    
+</form>
+</body>
+
+</html>

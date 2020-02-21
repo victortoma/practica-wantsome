@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercitiu 1 Tema
+
+    </title>
+</head>
+
+<body>
+    <form action="/action_page.php">
+        <div> Nume: <input type="text" name="Nume" required><br>
+
+            Prenume: <input type="text" name="Prenume" required>
+        </div>
+
+        <div>
+            <input type="radio" id="Barbat" name="sex" value="Barbat">
+            <label for="Barbat">barbat</label><br>
+            <input type="radio" id="Femeie" name="sex" value="Femeie" checked>
+            <label for="Femeie">femeie</label><br>
+            <input type="radio" id="Niciuna" name="sex" value="Niciuna">
+            <label for="Niciuna">niciuna</label>
+
+        </div>
+        <div>
+            <label for="numar">Selecteaza Varsta:</label><br>
+            <input type="number" id="numar" name="numar" min="18" max="85" required value="55">
+        </div><br>
+
+        <div>
+            <label for="tara">Select Tara:</label>
+            <select value="tara" name="tara" id="tara">
+                <option value="Tara">Selecteaza Tara</option>
+                <option value="Romania">Romania</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Cehia">Cehia</option>
+                <option value="Ungaria">Ungaria</option>
+
+            </select><br><br>
+        </div>
+
+        <div><label for="Oras">Orasul:</label>
+            <select id="oras">
+                <option value="selecteaza orasul">Selecteaza Orasul</option>
+                <option value="iasi"> Iasi</option>
+                <option value="bacau"> bacau</option>
+                <option value="pascani"> pascani</option>
+                <option value="vaslui"> vaslui</option>
+            </select>
+        </div><br>
+
+        <div> <label for="adresa">Adresa</label>
+            <input type="text" id="adresa" name="adresa" placeholder="Strada Palat nr 8 Turnu 2">
+        </div>
+
+        <div><label for="cod">Cod postal</label>
+            <input type="text" pattern="[0-9]{6}" id="cod" name="codpostal" placeholder="cod postal 6 cifre   "
+                required>
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="EMail" required>
+        </div>
+        <div>
+            <textarea id="descriere" cols="30" rows="4" value="descriere">descrie-te in 20 de cuvinte</textarea>
+
+        </div><label for="cv">Adauga CV:</label>
+        <input id="CV" type="file" value="CV"></div>
+        <br>
+        <br>
+
+        <input type="submit" value="inregistreaza">
+        <input type="reset" value="da reset">
+    </form>
+</body>
+
+</html>
