@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Exercitiu tema 3
+    </title>
+</head>
+
+<body>
+    <h2>Formular search</h2><ul>
+
+   <li> <div>
+        <form action="/action_page.php">
+            <label for="search">Search for:</label><br>
+            <input type="search" id="search" value="Cookies">
+            <input type="submit" value="search">
+    </div></li>
+
+
+   <li> <div><label for="Match">Match:</label>
+        <ul style="list-style-type:none ;">
+            
+            <li> <input type="radio" id="Anyword" value="Any word" name="Match" required>
+                <label for="Anyword">Any word</label>
+                <input type="radio" id="Allwords" value="All words" name="Match" checked required>
+                <label for="Allwords">All words</label>
+                <input type="radio" id="ExactPhrase" value="Exact Phrase" name="Match" required>
+                <label for="Exact Phrase">Exact Phrase</label></li>
+
+            <li> <input id="alike" type="checkbox" value="alike">
+                <label for="alike"> Sound-alike matching</label></li>
+        </ul>
+    </div></li>
+
+
+   <li> <DIV>
+        <label for="dated">Dated:</label>
+        <ul style="list-style-type:none ;">
+            <li> <input type="radio" id="dated" name="date" checked>
+
+                <select id="perioada">
+                    <option value="Last year">Last year</option>
+                    <option value="Last month">Last Month</option>
+                    <option value="Last week">Last week</option>
+                    <option value="All time">All time</option>
+                </select>
+
+                <br>
+            <li> <input type="radio" id="from" name="date" checked>
+                <label for="from">From</label>
+                <input id="from" type="date">
+
+                <label for="to">To</label>
+                <input id="to" type="date"></li></ul>
+    </DIV></li>
+
+    <li><div><label for="within">Within:</label>
+        <select id="within">
+            <option value="description">Description</option>
+            <option value="title">title</option>
+            <option value="all content" checked>All content</option>
+        </select>
+        <br>
+
+
+  <li>   <div>  <label for="show">Show:</label>
+        <select id="show">
+            <option value="10">10 </option>
+            <option value="100">100 </option>
+            <option value="1000">1000 </option>
+        </select>
+        <label for="show">results</label>
+        <select id="with">
+            <option value="with">With</option>
+            <option value="without">Without</option>
+        </select><label for="with">Summaries</label></div></li>
+    
+    </div></li>
+
+
+  <li>  <div>
+        <label for="sortby">Sort by:</label>
+        <select id="sortby">
+            <option value="relevance">relevance</option>
+            <option value="type">Type</option>
+            <option value="date">Date</option>
+            <option value="Ascending">Ascending</option>
+        </select>
+    </div></li></ul>
+    </form>
+</body>
+
+</html>

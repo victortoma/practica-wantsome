@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Exercitiu tema 4
+        </title>
+    </head>
+    <body><form action="/action_page.php">
+
+        <h2>Formular Feedback</h2>
+        <ul>   
+        <li><div>
+            <label for="text">Name:</label>
+            <input type="text" id="text" required minlength="3">
+            
+        </div></li>
+
+        
+      <li> <div>
+          <label for="email">Email:       </label>
+            <input id="email" type="email" required>
+        </div></li>
+
+
+       <li><div>
+           <label for="pass">Password:</label>
+            <input type="password" required>
+        </div></li>
+
+
+        <li><div>
+            <label for="emotions">Please check all the emotions that apply to you:</label>
+            <ul id="emotions">
+                 <li>   <label for="angry">Angry</label>
+                   <input type="checkbox" id="angry"></Li>
+                   <li> <label for="sad">Sad</label>
+                <input type="checkbox" id="sad"></li>
+                <li><label for="happy">Hngry</label>
+                <input type="checkbox" id="happy"></li>
+               <li>     <label for="all">Angry</label>
+               <input type="checkbox" id="all"></li>
+
+        </ul>
+
+        </div></li>
+
+    
+        <li><div>
+            <label for="satisfied">How satisfied were you with our service?</label>
+            <ul id="satisfied">
+                <li>
+                    <label for ="very">Very satisfied</label>
+                    <input type="radio" name="1" value="very" checked>
+
+                </li>
+                <li>
+                    <label for ="so">satisfied</label>
+                    <input type="radio" name="1" value="so" >
+                    
+                </li>
+                <li>
+                    <label for ="didnt">Didn't care</label>
+                    <input type="radio" name="1" value="Dont">
+                    
+                </li>
+                <li>
+                    <label for ="Diss">Dissatisfied </label>
+                    <input type="radio" name="1" value="diss" >
+                    
+                </li>
+                <li>
+                    <label for ="veryDiss">Very Dissatisfied</label>
+                    <input type="radio" name="1" value="verydiss">
+                    
+                </li>
+            </ul>
+            </div></li>
+<br>
+
+
+      <li><div>
+          <label for="area">Further comments</label>
+          <textarea cols="20" rows="3">Comments</textarea>
+
+        </div></li>
+
+
+      <li> <div>
+          <label for="photo">Bio Photo</label>
+          <input type="text">
+          <input type="file" value="none" accept="image/*" name="Photo" required>
+
+        </div></li>
+
+
+   <li>     <div><label for="location">Select Location:</label>
+                <select id="location" name="Select Location" value="Select">
+                    <option value="iasi" >Iasi</option>
+                    <option value="Select " selected="selected">Select Location</option>
+                    <option value="Vaslui">Vaslui</option>
+                    <option value="brasov">Brasov</option>
+                </select>
+
+        </div> </li>
+
+    
+        <li> <input type="submit"></li>  
+    </ul>
+    </form>
+    
+
+    </body>
+</html>
