@@ -1,0 +1,42 @@
+* {
+    font-size: 40px;
+}
+/*comment*/
+P::first-letter{
+    font-size:60px;
+}
+
+.main{
+    font-family: Arial;
+}
+
+#title{
+    text-decoration: underline;
+}
+
+a[href]{
+    text-decoration: none;
+}
+
+a[href="https://wantsome.ro"]{
+    color:seagreen;    
+}
+
+a[title]{
+    font-style: italic; 
+}
+
+a:hover{
+    color:red;
+    font-size:20px;
+}
+
+a:focus:last-child {
+    text-decoration: underline;
+}
+
+Footer::after{
+    content:"Continut adaugat din CSS";
+    background-color: yellow;
+
+}
