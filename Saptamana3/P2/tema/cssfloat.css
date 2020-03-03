@@ -1,0 +1,55 @@
+body{
+    background-color: gray;
+    margin-bottom: 40px;
+}
+
+#container{
+    border: 2px solid red;
+    box-sizing: border-box;
+    width:100%;
+    height:400px;
+}
+
+
+nav{
+    border:10px solid purple;
+    box-sizing: border-box;
+    float:left;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#div1{
+    border:5px solid blue;
+    box-sizing: border-box;
+float: right;
+width:80%;
+height:100%;
+
+}
+
+#sect1{
+    box-sizing: border-box;
+    border:2px solid yellow;
+    height:30%;
+}
+#sect2{
+    box-sizing: border-box;
+    border:2px solid yellow;
+    height:50%;
+}
+#sect3{
+    box-sizing: border-box;
+    border:2px solid yellow;
+    height:20%;
+}
+
+footer{
+    border:5px solid black;
+    box-sizing: border-box;
+    float:bottom;
+    height:50px;
+    
+}

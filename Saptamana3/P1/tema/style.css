@@ -42,7 +42,7 @@ input[placeholder~="last"]{
 
 input[type=password]{
     color:white;
-}
+} 
 
 input[type=email]::selection{
     background-color: yellow;

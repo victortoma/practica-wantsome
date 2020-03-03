@@ -1,0 +1,51 @@
+*{  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:3px;   
+     box-sizing:border-box;
+     
+    }
+
+h3{
+    text-align: center;
+}
+
+form{
+    border:5px solid rgba(172, 170, 170, 1);
+    padding:20px;
+    min-width: 400px;
+    margin-left:50px;
+    display:inline-block;
+     border-radius: 5px;
+     background-color: hsl(195, 53%, 92%);
+}
+
+input[type=submit], input[type=reset]{
+     background-color: hsl(195, 53%, 70%);
+     border:2px solid hsl(0, 0%, 73%););
+     border-radius:5px;
+     padding:5px;
+     margin:2px;
+}
+
+
+input, select, textarea{
+    float: right;
+    width:160px;
+    border:2px solid hsl(0, 0%, 73%);
+    border-radius: 5px;
+    
+}
+
+input:hover, select:hover, textarea:hover{
+    background-color:lightblue;
+}
+
+#divCv{
+    clear:both;
+}
+
+input[type=radio]{
+    float:none;
+    width:20px;
+    margin:10px;  
+}

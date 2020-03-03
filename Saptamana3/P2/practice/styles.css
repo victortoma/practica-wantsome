@@ -1,0 +1,26 @@
+h1{
+    background-color: #6a6;
+    padding: 10px;
+    border:2px solid red;
+}
+
+ul{
+    margin:15px;
+    background-color: #de1e7e;
+}
+
+p   
+ {
+   box-sizing: border-box;
+    width:500px;
+    height:300px;
+    border:2px dotted black;
+    background-color: #fb1;
+    padding:70px 
+    }
+
+  a{
+      border-bottom: 2px dashed blue;
+      background-color: #a1a1a1;
+      text-decoration: none;
+  }  
