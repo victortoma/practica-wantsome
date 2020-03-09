@@ -1,0 +1,30 @@
+@import 'mixins';
+@import 'operators';
+@import 'variables';
+@import 'nesting';
+
+
+body{
+    background: $blue;
+    border:$border;
+}
+
+input{
+    border: $border;
+}
+
+input[type=text]{
+   background-color:$hover;
+}
+
+label{
+    @include importante;
+}
+
+ul{
+    @include ulclass;
+}
+form
+{
+    @include ulclass;
+}

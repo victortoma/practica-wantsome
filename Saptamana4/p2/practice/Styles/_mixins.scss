@@ -1,0 +1,12 @@
+@mixin importante{
+    background-color: pink;
+    font-size:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+@mixin ulclass{
+    border:2px solid green;
+    border-radius: 5px;
+    width:400px;
+}
