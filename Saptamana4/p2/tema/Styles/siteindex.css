@@ -8,7 +8,6 @@
 body {
   text-align: center;
   color: #ececec;
-  min-width: 450px;
 }
 
 #tiny {
@@ -86,7 +85,7 @@ body {
   background-repeat: no-repeat;
   background-size: 40%;
   z-index: 1;
-  height: 200px;
+  min-height: 200px;
   width: auto;
 }
 
@@ -187,9 +186,8 @@ footer {
     background: url("https://assets.piliapp.com/s3pxy/actual-size/iphone-7/default-front.png");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: conver;
+    background-size: 40%;
     z-index: 1;
-    min-height: 400px;
     width: auto;
   }
 }
@@ -206,6 +204,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 250px;
   }
   #contentA {
     width: 50%;
@@ -244,6 +243,8 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .contentIcon {
     text-align: left;
@@ -255,8 +256,10 @@ footer {
   }
   .photoDiv {
     margin-top: 50px;
-    background-size: 60%;
+    background-size: 40%;
     width: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #secondDark {
     -webkit-box-orient: horizontal;

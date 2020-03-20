@@ -9,22 +9,7 @@ $secondcolor:rgb(236, 236, 236);
 }
 body{
     text-align: center;
-    color:$secondcolor;
-
-    min-width: 450px;
-  
-}
-// p, h6{
-//     padding:0 30px;
-// }
-
-// h1, h2, h3, h4, h5{
-//     padding:0 10px;
-// }
-
-
-// sect A
-
+    color:$secondcolor;}
 #tiny{
     text-align: center;
 }
@@ -99,7 +84,7 @@ body{
     background-repeat: no-repeat;
     background-size: 40%;
     z-index:1;
-    height:200px;
+     min-height:200px;
     width:auto;
 
 }
@@ -202,9 +187,8 @@ footer{
         background: url("https://assets.piliapp.com/s3pxy/actual-size/iphone-7/default-front.png");
         background-position: top center;
         background-repeat: no-repeat;
-        background-size: conver;
+        background-size: 40%;
         z-index:1;
-        min-height:400px;
         width:auto;
     
     }
@@ -219,7 +203,8 @@ footer{
        #sectAdiv{
          display:flex;
           flex-direction:row;
-        }
+            height: 250px;
+       }
        #contentA{
             width:50%;
             border-bottom: 8px solid $maincolor;
@@ -252,7 +237,8 @@ footer{
 //sectC
 .contentPhone{
         display:flex;
-        flex-direction:row;
+        flex-direction:row;     
+        box-sizing: border-box;
     }
     
  .contentIcon{
@@ -264,9 +250,11 @@ footer{
     }
 .photoDiv{
     margin-top:50px;
-    background-size: 60%;
+    background-size: 40%;
     width: 50%;
-}      
+    box-sizing: border-box;
+    
+}          
 #secondDark{
     flex-direction: row-reverse;
 }
