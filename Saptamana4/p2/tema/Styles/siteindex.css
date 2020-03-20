@@ -193,6 +193,9 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+  #sectA {
+    border-bottom: 8px solid rgba(170, 59, 8, 0.678);
+  }
   #sectA h6 {
     display: block;
   }
@@ -205,11 +208,12 @@ footer {
         -ms-flex-direction: row;
             flex-direction: row;
     height: 250px;
+    margin: 0px 100px;
   }
   #contentA {
     width: 50%;
-    border-bottom: 8px solid rgba(170, 59, 8, 0.678);
     margin-top: 20px;
+    text-align: left;
   }
   #emptyDiv {
     background: url("https://assets.piliapp.com/s3pxy/actual-size/iphone-7/default-front.png");
@@ -217,11 +221,10 @@ footer {
     background-repeat: no-repeat;
     background-size: 45%;
     width: 50%;
-    border-bottom: 8px solid rgba(170, 59, 8, 0.678);
     margin-top: 20px;
   }
   #sectA > div {
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0);
   }
   #flexDiv {
     display: -webkit-box;
