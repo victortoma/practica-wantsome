@@ -35,7 +35,7 @@ function capitalize(ex){
 //6
 
 function cut(par){
-  var result = par.replace(par.substr(0, 4), "");
+  var result = par.replace(par.substr(0, 4), " ");
   return result;
 }
 console.log(cut("mancare"));
