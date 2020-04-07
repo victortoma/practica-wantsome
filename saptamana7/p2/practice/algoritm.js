@@ -175,7 +175,7 @@ sortingFalse(arrayOne, arrayTwo);
 // Scrieti o functie care repeta un string de n ori specificate
 function adding(string, nr){
 var rezult = "";
-    for(i=0; i<nr; i++){//conditia de iteratie pentru a stabili de cate ori adaugam stringul in functie valoarea Nr, i=1, i<=nr
+    for(i=0; i<nr; i++){//conditia de iteratie pentru a stabili de cate ori adaugam stringul in functie valoarea Nr, i=1, i<=nr      
         rezult+=string;//rezultat la care concatenam stringul
     }console.log(rezult);
 }

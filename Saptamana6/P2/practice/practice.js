@@ -23,7 +23,7 @@ var helloWorldLang = function (numb1) {
     }
     else {
         console.log("Hi");
-    }
+    }   
 }
 
 helloWorldLang("China");
@@ -199,3 +199,32 @@ console.log("weekend")}
 else{
 console.log("not weekend");
 }
+
+
+function example(){
+  let a = 2;
+  function example2(b){
+   let result =  a*b;
+   a++;
+   return result;
+  }
+  return example2;
+}
+let fn2 = example();
+
+console.log(fn2(1));
+console.log(fn2(2));
+console.log(fn2(3));
+
+// function example(){
+//     let a = 2;
+//     function example2(b){
+//     a++; 
+//     return  a*b;
+//     }
+//     return example2;
+//   }
+  
+//   console.log(example()(3));
+// //   console.log(fn2(2));
+// //   console.log(fn2(3));
