@@ -253,3 +253,27 @@ const checkPlus = str => {
 }
 console.log(checkPlus('+a+a'));
 //Neterminata
+
+var variable = 10;
+(()=>{
+   console.log(variable);
+   var variable = 20;
+   console.log(variable);
+})();
+
+var variable = 10;
+(()=>{
+   console.log(variable);
+   variable = 20;
+   console.log(variable);
+})();
+
+
+let p1 = 0;
+
+x = { 
+ p1:10,
+ p2:20
+};
+
+console.log(x.p1); 

@@ -2,17 +2,36 @@
 //ex1
 // Am transformat Numberul in String pentru a putea extrage prima cifra din cnp, care indica sexul persoanei
 // Am stocat prima cifra in variabila
+
 // Pentru ca s-a facut conversia in string. nu am folosit "==="
+
 function checkGender(cnp) {
-    var primaCifra = cnp.toString()[0];
-    if (primaCifra == 1) {
+    var firstDigit = cnp.split('');
+    if (firstDigit[0] == 1) {
         return "Male";
     }
-    else if (primaCifra == 2) {
+    else if (firstDigit[0] == 2) {
         return "Female";
+    }else{
+        return 'wrong first digit';
     }
 }
-console.log(checkGender(211223232321));
+console.log(checkGender('21223232321'));
+
+//ex1.2
+
+const firstDigit = (cnp) => { 
+    if(cnp[0] == 1){ 
+        return "Male";
+    }
+    else if (cnp[0] == 2){
+        return "Female";
+    }
+    else{
+        return "Wrong First Digit";
+    }
+}
+console.log(firstDigit('233333323223'));
 
 //ex2
 var calificativ = function (nota) {
@@ -39,7 +58,7 @@ var calificativ = function (nota) {
 }
 console.log(calificativ(0));
 
-//ex3.1
+// //ex3.1
 
 var taraOrigine = function (masina) {
     if (masina.toUpperCase() === "AUDI" || masina.toUpperCase() === "VOLKSWAGEN") {
@@ -56,8 +75,7 @@ var taraOrigine = function (masina) {
     }
 }
 
-
-//ex 3.2
+// //ex 3.2
 
 function taraOrigine2(masina2) {
     var car = masina2.toUpperCase();
@@ -79,11 +97,10 @@ function taraOrigine2(masina2) {
 }
 console.log(taraOrigine2("toyota"));
 
-//ex3.3
-
-//Variabila "car"/"masina3" se gaseste stocata in interiorul obiectului sub forma diferitelor key
-//In momentul apelarii functiei se returneaza valoarea acestora
-//
+// //ex3.3
+// //Variabila "car"/"masina3" se gaseste stocata in interiorul obiectului sub forma diferitelor key
+// //In momentul apelarii functiei se returneaza valoarea acestora
+// //
 
 function taraOrigine3(masina3) {
     var car = masina3.toUpperCase();
@@ -100,15 +117,17 @@ function taraOrigine3(masina3) {
 }
 console.log(taraOrigine3("range rover"));
 
-// (function(call){
-//     alert (call);
+// 4. Scrieti o functie de tip IIFE care:
+// - sorteaza urmatorul array in functie de proprietatea "salary" a fiecarui obiect continut:
 
-// })("hello")
-
-// ex4 nu am reusit sa o fac IIFE
-
-var empArray = [{name: "John",  salary: 20000 },
+var empArray = [
+  {name: "John",  salary: 20000 },
   { name: "Danny", salary: 30500 },
-  { name: "Bekker", salary: 15000 }];
- console.log(empArray.sort(function(a, b){
-    return a.salary-b.salary;}));
+  { name: "Bekker", salary: 15000 }
+];
+// - afiseaza in consola array-ul sortat
+(function sortSalary (objArr){
+    console.log(objArr.sort(function(a,b){
+        return a.salary -b.salary;
+    }))
+})(empArray);
