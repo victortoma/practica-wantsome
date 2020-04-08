@@ -7,24 +7,25 @@
 
 function checkGender(cnp) {
     var firstDigit = cnp.split('');
-    if (firstDigit[0] == 1) {
+    const digits = firstDigit.intege
+    if (parseInt(firstDigit[0]) === 1) {
         return "Male";
     }
-    else if (firstDigit[0] == 2) {
+    else if (parseInt(firstDigit[0]) === 2) {
         return "Female";
     }else{
         return 'wrong first digit';
     }
 }
-console.log(checkGender('21223232321'));
+console.log(checkGender('1223232321'));
 
 //ex1.2
 
 const firstDigit = (cnp) => { 
-    if(cnp[0] == 1){ 
+    if(parseInt(cnp[0]) === 1){ 
         return "Male";
     }
-    else if (cnp[0] == 2){
+    else if (parseInt(cnp[0]) === 2){
         return "Female";
     }
     else{
