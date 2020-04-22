@@ -256,13 +256,59 @@ const sortStr = str => {
 }
 console.log(sortStr('hanah has many apples'));
 
-//7. Implementati o functie care accepta ca parametru un string si verifica daca inainte si dupa fiecare litera din cadrul sau se afla caracterul '+'
-// Exemplu: input: "+a+b+c+"   ->   output: true
-// Exemply: input: "+ab+c+d+"  ->   output: false
+   // 7. Implementati o functie care accepta ca parametru un string si verifica daca inainte si dupa fiecare litera din cadrul sau se afla caracterul '+'
+   // Exemplu: input: "+a+b+c+"   ->   output: true
+   // Exemply: input: "+ab+c+d+"  ->   output: false
 
-let strOne = "+a+d+b+c+";
+let strOne = "+a+b+a+b+c+";
 const checkPlus = str => {
-   for (i = 0; i < str.length; i += 2)
-      return str.charCodeAt(i) === 43;
+   const strSplit = str.split('');
+   console.log(strSplit.length)
+   // console.log(strSplit)
+   for (let i = 0; i < strSplit.length; i += 2) {
+      console.log(i)
+      let g = i+1;
+      console.log(g)
+         if (!strSplit[g].match(/[a-z]/i)) {
+      return false;
+   }
+   if (str.charCodeAt(i) === 43) continue;
+      else { return false }
+   }
+   return true;
 }
-console.log(checkPlus(strOne));
+console.log(checkPlus(strOne))
+
+
+// let checkStringPlusFormat = str => {
+//     const characters = str.split(""); // impart string-ul intr-un array litere ca sa il pot itera
+//     for (let i = 1; i < characters.length - 1; i += 2) { // avand in vedere ca un string corect e de forma +a+a+a+, inseamna ca trebuie sa merg din 2 in 2 incepand cu pozitia 1 din array
+//       console.log(`Ma aflu la pozitia ${i}, characters[i-1] este '${characters[i-1]}', characters[i] este '${characters[i]}',  characters[i+1] este '${characters[i+1]}'`);
+  
+//       if (!characters[i-1].match(/[a-z]/i)) { // daca pe pozitia curenta nu se afla o litera, oprim executia
+//         return false;
+//       }
+  
+//       if (characters[i - 1] === "+" && characters[i + 1] === "+") { // pentru fiecare pozitie, daca inainte si dupa avem +, mergem mai departe
+//         console.log(`----> Caracterul '${characters[i]}' de pe pozitia ${i} a indeplinit conditia de a avea '+' inainte si dupa, deci continuam cu urmatorul caracter \n\n\n`);
+//         continue;
+//       } else {
+//         console.log(`----> Caracterul '${characters[i]}' de pe pozitia ${i} nu a indeplinit conditia de a avea + inainte si dupa, deci oprim continuarea executiei \n\n\n`);
+//         return false; // daca conditia anterioara nu s-a indeplinit, adica nu avem + inainte si dupa pozitia curenta, returnam direct fals si iesim din functie, nu mai are rost sa continuam 
+//       } 
+//     }
+  
+  
+//     console.log(`Toate caracterele au indeplinit conditia de a avea '+' inainte si dupa, deci string-ul este formatat corect`)
+//     // daca for-ul s-a terminat, inseamna ca toate caracterele au trecut conditia din for, inseamna ca string-ul e corect, deci putem returna true
+//     return true;
+//   }
+  
+//   // const firstTest = checkStringPlusFormat('++a+a+');
+//   // console.log(firstTest);
+  
+//   // const secondTest = checkStringPlusFormat('+adsdsdsds+a+a+');
+//   // console.log(secondTest);
+  
+//   const thirdTest = checkStringPlusFormat('+a+a+a+');
+//   console.log(thirdTest);
