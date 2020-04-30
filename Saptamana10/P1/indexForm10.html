@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleForm10.css">
+</head>
+
+<body>
+    <div>
+        <form action="" method="POST">
+            <h3>GET YOUR OWN SITE!<br> 42 SITE ACCOUNTS IN SECONDS</h3>
+            <div>
+                <label for="userName">USERNAME:</label>
+                <input type="text" class="required" minLength="4" id="userName" >
+                <p>(Must be at least 4 characters, letters and numbers only.)</p>
+            </div>
+            <div>
+                <label for="email">EMAIL ADDRESS:</label>
+                <input type="email" id="email" class="required">
+                <p>We send your registration email to this address.(Double-check your email address before continuing
+                </p>
+            </div>
+            <div>
+                <label for="firstName">FIRST NAME:</label>
+                <input type="text" id="firstName" class="required">
+                <p>(Must be input.)</p>
+            </div>
+            <div>
+                <label for="lastName">LAST NAME:</label>
+                <input type="text" id="lastName"class="required">
+                <p>(Must be input.)</p>
+            </div>
+            <div>
+                <label for="nickName">NICKNAME:</label>
+                <input type="text" id="nickName">
+                <br><br>
+            </div>
+            <div>
+                <label for="phone">PHONE:</label>
+                <input type="number" id="phone" minLength="10"class="required">
+                <p>(Must be at least 10 characters, numbers only.)</p>
+            </div>
+            <div id="radioDiv">
+                <input type="radio" id="getSite" name="radioCheck" value="site">
+                <label for="getSite">GIVE ME A SITE.</label><br>
+
+                <input type="radio" id="getUserName" name="radioCheck" value="username">
+                <label for="getUserName">JUST A USERNAME, PLEASE.</label>
+            </div><br>
+            <input type="submit" id="submit" value="NEXT">
+        </form>
+    </div>
+
+</body>
+<script src="indexForm10.js"></script>
+</html>
