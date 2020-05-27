@@ -2,12 +2,12 @@
   border: none;
   padding: 0px;
   margin: 0px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 body {
   text-align: center;
-  color: #ececec;
+  color: white;
 }
 
 #tiny {
@@ -23,8 +23,10 @@ body {
   margin-top: 20px;
 }
 
-#sectA h6 {
-  display: none;
+#sectA h5 {
+  color: white;
+  display: block;
+  width: 400px;
 }
 
 #sectA {
@@ -47,12 +49,8 @@ body {
 }
 
 #sectA img {
-  width: 80px;
-  height: 30px;
-}
-
-#contentA {
-  padding: 10px 30px;
+  width: 100px;
+  height: 35px;
 }
 
 #sectB {
@@ -74,6 +72,10 @@ body {
   color: #ececec;
 }
 
+.contentIcon {
+  margin-right: 100px;
+}
+
 #sectC h2 {
   display: block;
   height: 60px;
@@ -91,10 +93,6 @@ body {
 
 #secondDark {
   background-color: #3c3c3c;
-}
-
-.contentIcon {
-  padding: 20px;
 }
 
 .iconTwo {
@@ -117,7 +115,9 @@ form {
   margin-right: auto;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
   width: 100%;
 }
 
@@ -178,9 +178,9 @@ footer {
   text-align: right;
 }
 
-@media screen and (min-width: 600px) {
-  #sectA h6 {
-    display: block;
+@media screen and (min-width: 500px) {
+  #sectA h5 {
+    display: none;
   }
   .photoDiv {
     background: url("https://assets.piliapp.com/s3pxy/actual-size/iphone-7/default-front.png");
@@ -192,11 +192,11 @@ footer {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   #sectA {
     border-bottom: 8px solid rgba(170, 59, 8, 0.678);
   }
-  #sectA h6 {
+  #sectA h5 {
     display: block;
   }
   #sectAdiv {
@@ -225,6 +225,9 @@ footer {
   }
   #sectA > div {
     background-color: rgba(255, 0, 0, 0);
+  }
+  .contentFlex p {
+    padding: 20px;
   }
   #flexDiv {
     display: -webkit-box;
@@ -255,7 +258,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
     width: 50%;
-    padding: 50px;
+    padding: 50px 70px;
   }
   .photoDiv {
     margin-top: 50px;
