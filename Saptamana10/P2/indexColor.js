@@ -16,7 +16,7 @@ style.innerHTML =
 request.onload = function() {
 	let colorsObj = {};
 	colorsObj = request.response;
-	const colorsValues = Object.values(colorsObj);
+	const colorsValues = Object.values(colorsObj);	
 	const colorsNames = Object.keys(colorsObj);
 	
 	for (let every in colorsValues) {
