@@ -1,0 +1,325 @@
+* {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+h3 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+button {
+  background-color: lightpink;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+nav {
+  height: 50px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .fas {
+  color: black;
+  font-size: 25px;
+}
+
+#logo {
+  width: 100px;
+}
+
+#navDiv {
+  width: 1250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navDiv div {
+  padding: 5px 20px;
+}
+
+#searchBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#search {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+#bodyContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sideBar {
+  min-width: 245px;
+  padding: 0 18px;
+}
+
+#sortHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sortHeader div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#sortHeader :nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mainDisplay {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1000px;
+}
+
+#displayProducts {
+  background-color: #f2f4f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.productDiv {
+  width: 240px;
+  height: 380px;
+  text-align: center;
+  background-color: white;
+  padding: 2px;
+  margin: 2px 4px 4px;
+}
+
+.productDiv:hover {
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(100, 0, 0, 0.7);
+          box-shadow: 0px 8px 16px 0px rgba(100, 0, 0, 0.7);
+}
+
+#image img {
+  width: 90%;
+}
+
+.phoneRating {
+  background-color: pink;
+}
+
+.phoneDescription {
+  background-color: lightblue;
+}
+
+.phonePrice {
+  color: blue;
+}
+
+.buyPhone button {
+  color: red;
+}
+
+@media screen and (max-width: 1350px) {
+  #mainDisplay {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 750px;
+  }
+  #navDiv {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #mainDisplay {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 500px;
+  }
+  #navDiv {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    height: 70px;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #navDiv {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #searchBox {
+    width: 100%;
+  }
+  #bodyContent {
+    border: 3px solid pink;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  #sideBar {
+    display: none;
+  }
+  #mainDisplay {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  #displayProducts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .productDiv {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    line-height: 1.8;
+  }
+  #phoneData {
+    padding: 10px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+  }
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: lightgray;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: 1px solid black;
+  border-width: 0px 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*# sourceMappingURL=index.css.map */

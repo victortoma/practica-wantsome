@@ -1,0 +1,324 @@
+
+
+* {
+    // border     : 1px solid gray;
+    margin     : 0px;
+    box-sizing : border-box;
+    font-size  : 18px;
+    line-height: 1.2;
+}
+
+h3{
+    padding-top:14px;
+    padding-bottom: 14px;
+}
+// :hover{
+//     border:1px solid red;
+// }
+button{
+    background-color: lightpink;
+    padding: 5px;
+    border-radius: 2px;
+}
+nav {
+    height          : 50px;
+    margin-top      : 20px;
+    display         : flex;
+    justify-content : center;
+    // align-content: center;
+}
+
+nav .fas {
+    color    : black;
+    font-size: 25px;
+}
+
+//top
+
+#logo {
+    width: 100px;
+}
+
+#navDiv {
+    width              : 1250px;
+    display            : flex;
+    // background-color: rgb(99, 16, 16);
+
+}
+
+#navDiv div {
+    padding: 5px 20px;
+}
+
+#searchBox {
+    display            : flex;
+    width              : 100%;
+    // background-color:red ;
+    align-content      : center;
+    justify-content    : center;
+}
+
+#search {
+    width        : 100%;
+    border       : 1px solid gray;
+    border-radius: 3px;
+
+}
+
+// //middle
+#bodyContent {
+    box-sizing     : border-box;
+    border         : 3px solid pink;
+    display        : flex;
+    justify-content: center;
+}
+
+#sideBar {
+    min-width   : 245px;
+    padding  : 0 18px;
+    // margin-left: 5px;
+}
+
+//filter
+
+#sortHeader {
+    // border            : 2px solid black;
+    display           : flex;
+    justify-content   : space-between;
+    height            : 50px;
+    align-items: center;
+    // padding        : 10px;
+}
+
+#sortHeader div {
+    display      : flex;
+    align-content: center;
+}
+
+#sortHeader :nth-of-type(2) {
+    display   : flex;
+    // padding: 10px;
+}
+
+#mainDisplay {
+    flex-direction: row;
+    width     : 1000px;
+}
+
+
+#displayProducts {
+    background-color  : #f2f4f5;
+    display           : flex;
+    width             : 100%;
+    flex-wrap         : wrap;
+    // box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
+
+}
+
+//detalii produs
+
+.productDiv {
+    width           : 240px;
+    height          : 380px;
+    text-align      : center;
+    background-color: white;
+    padding: 2px;
+    margin: 2px 4px 4px;
+    // box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
+}
+
+.productDiv:hover {
+    box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
+}
+#image img {
+    width: 90%
+}
+
+.phoneRating {
+    background-color: pink;
+}
+
+.phoneDescription {
+    background-color: lightblue;
+    // padding: 5px 15px;
+}
+
+.phonePrice {
+    color: blue;
+}
+
+.buyPhone button {
+    color: red;
+}
+
+// .state{ 
+//     display:flex;
+//     // align-content:  ;
+// }
+//display 3
+@media screen and (max-width: 1350px) {
+    #mainDisplay {
+        flex-direction: row;
+        width         : 750px;
+    }
+
+    #navDiv {
+        width: 1000px;
+    }
+
+}
+
+//display 2
+@media screen and (max-width: 1100px) {
+    #mainDisplay {
+        flex-direction: row;
+        width         : 500px;
+    }
+
+    #navDiv {
+        width: 750px;
+    }
+
+}
+
+
+//tablet
+@media screen and (max-width: 800px) {
+
+    nav {
+        height         : 70px;
+        margin-top     : 20px;
+        display        : flex;
+        justify-content: center;
+    }
+
+    #navDiv {
+        width  : auto;
+        display: flex;
+    }
+
+    #searchBox {
+        width: 100%;
+    }
+
+    //middle
+    #bodyContent {
+        border            : 3px solid pink;
+        display           : flex;
+        // justify-content: center;
+        flex-wrap         : wrap;
+        width             : 100%;
+    }
+
+    #sideBar {
+        display: none;
+    }
+
+    #mainDisplay {
+        flex-direction: row;
+        width         : 100%;
+    }
+
+
+    #displayProducts {
+        display              : grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        // width       : auto;
+        // flex-wrap   : wrap;
+
+    }
+
+    .productDiv {
+        box-sizing : border-box;
+        width      : 100%;
+        height     : auto;
+        line-height: 1.8;
+    }
+
+    // #image {
+    //     // min-width: 200px;
+    // }
+
+    #phoneData {
+        padding       : 10px;
+        height        : auto;
+        display       : flex;
+        flex-direction: column;
+        align-content : stretch;
+    }
+
+}
+
+//
+
+/* The container */
+.container {
+    // border:2px solid black;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 22px;
+      width: 22px;
+      background-color: #eee;
+      border-radius:2px;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: lightgray;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: 1px solid black;
+      border-width: 0px 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+  

@@ -1,0 +1,14 @@
+[
+    {
+        "photo":"img src=./images/iphone7Front.jpg",
+        "review": 979,
+        "name": "Telefon mobil Apple iPhone 7, 32GB, Black",
+        "price": 1690 "Ron",
+    },
+    {
+        "photo":"./images/iphone7Front.jpg",
+        "review": 879,
+        "name": "Telefon mobil Apple iPhone 7, 32GB, Black",
+        "price": 1590 "Ron",
+    }
+]
