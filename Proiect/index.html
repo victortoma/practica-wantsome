@@ -4,195 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projec</title>
+    <title>Project</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
-    <link rel="stylesheet" type="text/css" href="../../fontawesome-free-5.13.0-web/css/all.css">
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" </head>
 
 <body>
     <div id="bodyDiv">
         <nav>
             <div id="navDiv">
-                <div id="mainMenu">
-                    <i class="fas fa-bars"></i>
+                <div id="mainMenu" class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-bars"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 4</a>
+                    </div>
                 </div>
+
                 <div id="logo">
-                    <img src="https://helios-apartments.com/wp-content/uploads/2019/01/airbnb-2-png-transparent-logo-1.png"
-                        alt=""" alt=" logo" width="40px">
-
+                    <a href="#"><img src="./Lunaris.png"
+                        alt="logo" width="140px"></a>
                 </div>
+
                 <div id="searchBox">
-                    <input type="text" id="search">
-                    <button><i class="fas fa-search"></i></button>
-
+                    <input type="text" id="search" placeholder="Search...">
+                    <i class="fas fa-search"></i>
                 </div>
-                <div>
 
+                <div>
                     <i class="fas fa-user"></i>
                 </div>
+
                 <div id="shoppingCart">
                     <i class="fas fa-shopping-cart"></i>
                 </div>
+
             </div>
         </nav>
-        <br>
+
+        <div id="poster">
+            <img src="./poster.png" alt="">
+        </div>
 
         <div id="bodyContent">
 
-            <!-- //Sidebar -->
+            <div id="sortHeader">
 
-            <div id="sideBar">
+                <div id="hideBtn">
+                    <button id="toggleFilters"><i class="fas fa-sliders-h"></i></button>
+                </div>
 
-                <div class="sideClass">
-                    <h3>
-                        Rating
-                    </h3>
-                    <div id="ratingFilter">
-
-                        <label class="container" for="fiveStars"><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i>
-                            <input type="radio" id="fiveStars" name="stars" value="5">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container" for="fourStars"><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="far fa-star"></i>
-                            <input type="radio" id="fourStars" name="stars" value="4">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container" for="threeStars"><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i>
-                            <input type="radio" id="threeStars" name="stars" value="3">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container" for="twoStars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                            <input type="radio" id="twoStars" name="stars" value="2">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="container" for="oneStar"><i class="fas fa-star"></i><i class="far fa-star"></i><i
-                                class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                            <input type="radio" id="oneStar" name="stars" value="1">
-                            <span class="checkmark"></span>
-                        </label>
+                <div>
+                    <div id="sortByDiv">
+                        <label for="sortBy">Sort By :</label>
+                        <select name="sortBy" id="select">
+                            <option value="relevance">Relevance</option>
+                            <option value="priceAscending">Price Ascending</option>
+                            <option value="priceDescending">Price Descending</option>
+                            <option value="reviewNumber">Review</option>
+                        </select>
 
                     </div>
+
+                    <div id="viewType">
+                        <i class="fas fa-align-justify"></i>
+                        <i class="fas fa-th-large"></i>
+                    </div>
                 </div>
-                <div class="sideClass">
-                    <div>
+            </div>
+
+            <div id="flexWrapper">
+                <div class="sideBar" class="revealSidebar">
+                    <div class="sideClass">
+                        <div id="ratingFilter">
+                            <h6>
+                                Minim Rating
+                                <button class="rotateClass"><i class="fas fa-caret-down "></i></button>
+                            </h6>
+
+                            <label class="container" for="fiveStars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <input type="checkbox" id="fiveStars" name="stars" value="4.5"
+                                    onclick="onlyOneStar(this)">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" for="fourStars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star"></i>
+                                <input type="checkbox" id="fourStars" name="stars" value="4"
+                                    onclick="onlyOneStar(this)">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" for="threeStars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                                <input type="checkbox" id="threeStars" name="stars" value="3"
+                                    onclick="onlyOneStar(this)">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" for="twoStars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                                <input type="checkbox" id="twoStars" name="stars" value="2" onclick="onlyOneStar(this)">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="container" for="oneStar">
+                                <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i>
+                                <input type="checkbox" id="oneStar" name="stars" value="1" onclick="onlyOneStar(this)">
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </div>
                         <div id="memoryFilter">
 
-                            <h3>
-                                Memory
-                            </h3>
+                            <h6>
+                                Memory Capacity
+                                <button class="rotateClass"><i class="fas fa-caret-down "></i></button>
+                            </h6>
+                            <!-- NAME DE SCHIMBAT? -->
                             <label class="container">256GB
-                                <input type="checkbox" id="memory256" name="256" value="">
+                                <input type="checkbox" id="memory256" name="memory" value="256">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container">128GB
-                                <input type="checkbox" id="memory128" name="128" value="">
+                                <input type="checkbox" id="memory128" name="memory" value="128">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container">64GB
-                                <input type="checkbox" id="memory64" name="64" value="">
+                                <input type="checkbox" id="memory64" name="memory" value="64">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container">32GB
-                                <input type="checkbox" id="memory32" name="32" value="">
+                                <input type="checkbox" id="memory32" name="memory" value="32">
                                 <span class="checkmark"></span>
                             </label>
+                        </div>
 
+                        <div id="priceFilter">
+                            <h6>
+                                Price range
+                                <button class="rotateClass"><i class="fas fa-caret-down"></i></button>
+                            </h6>
+
+                            <label class="container" for="price1">1000-1300$
+                                <input type="checkbox" id="price1" name="price" value="1300"
+                                    onclick="onlyOnePrice(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="price2">800-1000$
+                                <input type="checkbox" id="price2" name="price" value="1000"
+                                    onclick="onlyOnePrice(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="price3">600-800$
+                                <input type="checkbox" id="price3" name="price" value="800"
+                                    onclick="onlyOnePrice(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="price4">400-600$
+                                <input type="checkbox" id="price4" name="price" value="600"
+                                    onclick="onlyOnePrice(this)">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
-                <div class="sideClass">
-                    <h3>Price</h3>
-                    <div id="priceFilter">
-                        <label class="container" for="price1">600-800$
-                            <input type="radio" id="price1" name="price" value="800">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="price2">500-600$
-                            <input type="radio" id="price2" name="price" value="600">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="price3">400-500$
-                            <input type="radio" id="price3" name="price" value="500">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="price4">300-400$
-                            <input type="radio" id="price4" name="price" value="400">
-                            <span class="checkmark"></span>
-                        </label>
-
-                    </div>
-                </div>
-                <div class="sideClass">
-                    <h3>Manufacturer</h3>
-
-                    <div id="manufacturerFilter">
-
-                        <label class="container" for="apple">Apple
-                            <input type="radio" id="apple" name="manufacturer" value="apple">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="samsung">Samsung
-                            <input type="radio" id="samsung" name="manufacturer" value="samsung">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="huawei">Huawei
-                            <input type="radio" id="huawei" name="manufacturer" value="huawei">
-                            <span class="checkmark"></span>
-                        </label>
-                     
-                    </div>
-                </div>
-            </div>
-
-            <div id="mainDisplay">
-
-                <!-- //SortHeader -->
-
-                <div id="sortHeader">
-                    <div id="hideSidebar">
-                        <div>
-                            <button>Categories</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div id="sortBy">
-                            <label for="sort">Sort By</label>
-                            <select name="sort" id="select">
-                                <option value="relevance">Relevance</option>
-                                <option value="priceAscending">Price Ascending</option>
-                                <option value="priceDescending">Price Descending</option>
-                                <option value="reviewNumbers">Review</option>
-                            </select>
-
-                        </div>
-
-                        <div id="viewType">
-                            <i class="fas fa-align-justify"></i>
-                            <i class="fas fa-th-large"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- //viewProducts -->
-
                 <div id="displayProducts">
 
                 </div>
-
             </div>
-
         </div>
+
         <footer>
             footer
         </footer>

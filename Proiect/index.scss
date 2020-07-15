@@ -1,324 +1,678 @@
+$mainColor          :#f2f3f7;
+$iconColor          : #43ada8;
+$backgroundColor    : #e4eee8;
+// $backgroundColor : rgba(228, 238, 232, 0.8);
+$shadow             :rgba(0, 0, 0, 0.45);
+$secondShadow       : rgba(0, 0, 0, 0.2);
+$whiteLight         : rgba(255, 255, 255, 0.85);
+$light              : rgba(255, 255, 255, 0.75);
 
 
 * {
-    // border     : 1px solid gray;
-    margin     : 0px;
-    box-sizing : border-box;
-    font-size  : 18px;
-    line-height: 1.2;
+
+    box-sizing       : border-box;
+    font-family      : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding          : 0px;
+    // font-size     : 16px;
+    line-height      : 1.1;
 }
 
-h3{
-    padding-top:14px;
-    padding-bottom: 14px;
+h6 {
+    display      : block;
+    // height: 20px;
+    font-size    : 16px;
+    // padding: 10px;
+    margin-top   : 3px;
+    margin-bottom: 10px;
 }
-// :hover{
-//     border:1px solid red;
-// }
-button{
-    background-color: lightpink;
-    padding: 5px;
-    border-radius: 2px;
+
+body {
+    background          : $backgroundColor;
+    // margin-left     : 10px;
+    margin              : 0;
+    // margin-right     : 10px;
+    display             : flex;
+    position            : relative;
 }
+
 nav {
-    height          : 50px;
-    margin-top      : 20px;
-    display         : flex;
-    justify-content : center;
-    // align-content: center;
-}
+    display        : flex;
+    justify-content: center;
+    position       : sticky;
+    top            : 0;
+    left           : 0;
+    height         : 75px;
+    z-index        : 3;
+    transition     : 0.5s;
+    width          : 100%;
 
-nav .fas {
-    color    : black;
-    font-size: 25px;
-}
+    i:hover {
+        background-color: gray;
+    }
 
-//top
-
-#logo {
-    width: 100px;
+    #logo {
+        margin-left        : 5px;
+        margin-right       : 10px;
+        margin-top         : 2px;
+        width              : 200px;
+        // background-color: red;
+    }
 }
 
 #navDiv {
-    width              : 1250px;
+    // border          : 2px solid red;
+    align-items     : center;
+    background-color: $backgroundColor;
+
     display            : flex;
-    // background-color: rgb(99, 16, 16);
+    position           : sticky;
+    // box-shadow      : -3px -2px 2px $whiteLight, 3px 3px 5px $shadow;
+    border-bottom      : 0.5px solid rgba(0, 0, 0, 0.1);
+    // border-left     : 0.5px solid rgba(0, 0, 0, 0.05);
+    height             : 65px;
+    padding            : 0 20px;
+    opacity            : 1;
+    width              : 1240px;
 
-}
+    i {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        cursor          : pointer;
+        background-color: $mainColor;
+        color           : $iconColor;
+        font-size       : 20px;
+        width           : 40px;
+        height          : 30px;
+        margin-left     : 10px;
+        // margin-right: 12px;
+        border-radius   : 5px;
+        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
+        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
+        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+    }
 
-#navDiv div {
-    padding: 5px 20px;
+    i:active {
+        transform : scale(0.97);
+        transition: 0.02s ease-in;
+    }
+
+    #mainMenu i {
+        margin: 0;
+    }
+
+    button {
+        background-color: $backgroundColor;
+    }
+
+    .reduceTransparency {
+        background-color: red;
+        transition      : 0.2s;
+    }
 }
 
 #searchBox {
-    display            : flex;
-    width              : 100%;
-    // background-color:red ;
-    align-content      : center;
-    justify-content    : center;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 100%;
+
+    #search {
+        background-color: $mainColor;
+        outline         : none;
+        border-radius   : 5px;
+        border          : 1px solid transparent;
+        height          : 35px;
+        width           : 90%;
+        box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.55);
+        border-bottom   : 0.5px solid rgba(0, 0, 0, 0.1);
+        border-right    : 0.5px solid rgba(0, 0, 0, 0.1);
+        padding-left    : 10px;
+
+    }
 }
 
-#search {
-    width        : 100%;
-    border       : 1px solid gray;
-    border-radius: 3px;
+//dropdown menu
+.dropbtn {
+    border         : none;
+    outline        : none;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    cursor         : pointer;
+    width          : 50px;
+}
+
+.dropdown {
+    display : inline-block;
+    display : flex;
+    cursor  : pointer;
+    position: relative;
+    height  : 50px;
+}
+
+.dropdown-content {
+    background-color: $mainColor;
+    display         : none;
+    position        : absolute;
+    left            : 0;
+    top             : 50px;
+    min-width       : 300px;
+    box-shadow      : 0px 8px 16px 0px $secondShadow;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display        : block;
+    padding        : 12px 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    // width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+// .dropdown:hover .dropbtn {
+// background-color: #ccdbcd;
+// }
+
+.dropbtn {
+    // background-color: red;
+    display        : flex;
+    align-content  : center;
+    justify-content: flex-start;
+}
+
+#poster img {
+    margin   : 0;
+    width    : 100%;
+    // height:250px;
 
 }
 
 // //middle
 #bodyContent {
+    margin-left    : auto;
+    margin-right   : auto;
     box-sizing     : border-box;
-    border         : 3px solid pink;
     display        : flex;
+    flex-direction : column;
     justify-content: center;
+    margin-top     : 5px;
+    width          : 1240px;
 }
 
-#sideBar {
-    min-width   : 245px;
-    padding  : 0 18px;
-    // margin-left: 5px;
-}
-
-//filter
-
+// hEADER
 #sortHeader {
-    // border            : 2px solid black;
-    display           : flex;
-    justify-content   : space-between;
-    height            : 50px;
-    align-items: center;
-    // padding        : 10px;
+    background     : $backgroundColor;
+    display        : flex;
+    align-items    : center;
+    width          : auto;
+    justify-content: space-between;
+    border-bottom  : 0.5px solid rgba(0, 0, 0, 0.1);
+    padding        : 0 20px;
+    position       : sticky;
+    top            : 63px;
+    z-index        : 2;
+    height         : 50px;
+
+    #toggleFilters {
+        border : none;
+        outline: none;
+        cursor : pointer;
+        margin : 0;
+        width  : 50px;
+    }
+
+    i {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        color           : $iconColor;
+        background-color: $mainColor;
+        cursor          : pointer;
+        font-size       : 20px;
+        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
+        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
+        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+        width           : 40px;
+        height          : 30px;
+        border-radius   : 5px;
+
+    }
+
+    i:active {
+        transform : scale(0.97);
+        transition: 0.02s ease-in;
+    }
+
+    #select {
+        background-color: $mainColor;
+        cursor          : pointer;
+        border          : none;
+        outline         : none;
+        padding         : 6px;
+        margin-top      : 2px;
+        border-radius   : 5px;
+        box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.55);
+        border-bottom   : 0.5px solid rgba(0, 0, 0, 0.05);
+        border-right    : 0.5px solid rgba(0, 0, 0, 0.05);
+
+    }
+
+    :nth-of-type(2) {
+        display       : flex;
+        flex-direction: row;
+        align-items   : center;
+
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    select:hover {
+        color  : $iconColor;
+        outline: none;
+        border : none;
+    }
+
+    button {
+        visibility      : hidden;
+        background-color: $backgroundColor;
+    }
 }
 
-#sortHeader div {
-    display      : flex;
-    align-content: center;
+//SIDEBAR
+.sideBar {
+    // overflow: scroll;
+    width              : 200px;
+    position           : relative;
+    background         : $backgroundColor;
+    // border          : 1px solid red;
+    transition         : 0.3s ease;
+    width              : auto;
+
+    .sideClass {
+        // overflow: scroll;
+        background: $backgroundColor;
+
+        position: sticky;
+        top     : 109px;
+        padding : 10px 20px;
+
+        // min-height: 750px;
+        div {
+            position     : relative;
+            width        : 190px;
+            padding      : 5px 10px;
+            background   : $mainColor;
+            border-radius: 5px;
+            box-shadow   : -3px -2px 3px $light, 3px 2px 5px $secondShadow;
+            border-top   : 0.5px solid rgba(0, 0, 0, 0.05);
+            border-left  : 0.5px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 12px;
+
+            // border-bottom: 1px solid rgb(177, 6, 6);
+            button i {
+                display   : flex;
+                align-self: center;
+                color     : $iconColor;
+            }
+
+            h6 button {
+                box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
+                border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
+                border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+                // margin-top:2px;
+                // background: yellow; 
+                float           : right;
+                border          : 3px solid $iconColor;
+                width           : 20px;
+                height          : 20px;
+                transition      : 0.3s ease-in;
+                outline         : none;
+                // border          : none;
+                border-radius   : 50%;
+                cursor          : pointer;
+                justify-content : center;
+                // align-content: center;
+                display         : flex;
+                // transform : rotate(-9deg);
+            }
+        }
+
+        .minimize {
+            height  : 36px;
+            overflow: hidden;
+
+        }
+
+        .rotateClass {
+            // background-color: red;
+            transition: 0.3s ease-in;
+            transform : rotate(180deg);
+            box-shadow: -3px -2px 3px $shadow, 3px 2px 5px $whiteLight;
+        }
+
+        div:last-of-type {
+            // background-color: red;
+            margin-bottom: 0;
+        }
+
+        div:hover {
+            box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
+            transition: 0.3s;
+        }
+    }
+
+    .fas {
+        color: #f8ce0b;
+    }
+
+    .far {
+        color: gray;
+    }
 }
 
-#sortHeader :nth-of-type(2) {
+
+#flexWrapper {
+    position  : relative;
     display   : flex;
-    // padding: 10px;
+    width     : auto;
+    min-height: 750px;
 }
-
-#mainDisplay {
-    flex-direction: row;
-    width     : 1000px;
-}
-
 
 #displayProducts {
-    background-color  : #f2f4f5;
-    display           : flex;
-    width             : 100%;
-    flex-wrap         : wrap;
-    // box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
-
+    background-color: $backgroundColor;
+    display         : flex;
+    width           : 100%;
+    flex-wrap       : wrap;
 }
 
 //detalii produs
 
 .productDiv {
-    width           : 240px;
-    height          : 380px;
+    padding         : 5px 0;
     text-align      : center;
-    background-color: white;
-    padding: 2px;
-    margin: 2px 4px 4px;
-    // box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
+    background      : $mainColor;
+    border-radius   : 5px;
+    box-shadow      : -3px -2px 5px $light, 3px 2px 5px $secondShadow;
+    border-top      : 1px solid rgba(0, 0, 0, 0.05);
+    border-left     : 1px solid rgba(0, 0, 0, 0.05);
+    // padding      : 5px;
+    margin          : 10px;
+    width           : 230px;
+    height          : 380px;
+    transition      : 0.3s ease-in-out;
+    transform       : scale(1);
+
+    img {
+        // box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 5px $shadow;
+        border-radius: 2px;
+        width        : 90%;
+    }
+
+    div:nth-child(2) {
+        flex-direction     : column;
+        display            : flex;
+        // background-color: red;
+        padding            : 0 5px;
+        height             : 140px;
+    }
+
+    button {
+        background-color: $iconColor;
+        color           : $mainColor;
+        cursor          : pointer;
+        outline         : none;
+        border-radius   : 5px;
+        padding         : 8px 10px;
+        // margin-top:5px;
+        border          : none;
+        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
+        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
+        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+
+    button:active {
+        // background-color: lightgray;
+        transform : scale(0.97);
+        transition: 0.02s ease-in;
+    }
+
+    // div:nth-of-type(2){
+    //     height: 60px;
+    //     // background-color: red;
+    // }
+    // .phoneRating {
+    //     // background-color: pink;?
+    //     height  : 30px;
+    //     width   : auto;
+    //     position: relative;
+    // }
+
+    // .phoneDescription {
+    //     background-color: lightblue;
+    //     // padding: 5px 15px;
+    // }
+
+    .phonePrice {
+        color: red;
+    }
+
+    // .buyPhone button {
+    //     color: red;
+    // }
+
+    // span {
+    //     display         : inline-block;
+    //     background-color: purple;
+    // }
 }
 
 .productDiv:hover {
-    box-shadow: 0px 8px 16px 0px rgba(100,0,0,0.7);
-}
-#image img {
-    width: 90%
+    // background-color: red;
+    box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
+    transition: 0.2s ease-in;
+    transform : scale(1.02);
+    // z-index: 100;
+
 }
 
-.phoneRating {
-    background-color: pink;
-}
-
-.phoneDescription {
-    background-color: lightblue;
-    // padding: 5px 15px;
-}
-
-.phonePrice {
-    color: blue;
-}
-
-.buyPhone button {
-    color: red;
-}
-
-// .state{ 
-//     display:flex;
-//     // align-content:  ;
-// }
 //display 3
-@media screen and (max-width: 1350px) {
-    #mainDisplay {
-        flex-direction: row;
-        width         : 750px;
+@media screen and (max-width: 1250px) {
+    #bodyContent {
+        width: 990px;
     }
 
     #navDiv {
-        width: 1000px;
+        width: 990px;
     }
 
+    #sortHeader {
+        width: auto;
+    }
 }
-
-//display 2
-@media screen and (max-width: 1100px) {
-    #mainDisplay {
-        flex-direction: row;
-        width         : 500px;
-    }
-
-    #navDiv {
-        width: 750px;
-    }
-
-}
-
 
 //tablet
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+    #bodyContent {
+        width: auto;
+
+    }
 
     nav {
-        height         : 70px;
-        margin-top     : 20px;
-        display        : flex;
-        justify-content: center;
+        width: auto;
     }
 
     #navDiv {
-        width  : auto;
-        display: flex;
-    }
-
-    #searchBox {
         width: 100%;
     }
 
-    //middle
-    #bodyContent {
-        border            : 3px solid pink;
-        display           : flex;
-        // justify-content: center;
-        flex-wrap         : wrap;
-        width             : 100%;
+    // //middle
+    #sortHeader button {
+        visibility      : initial;
+        background-color: $backgroundColor;
     }
 
-    #sideBar {
-        display: none;
+    .sideBar {
+        // display         : none;
+        position           : absolute;
+        // top          : 170px;
+        z-index            : 1;
+        height             : 100%;
+        left               : -230px;
+        width              : auto;
+        // background      : $whiteLight;
+        transition         : 0.3s ease;
     }
 
-    #mainDisplay {
-        flex-direction: row;
-        width         : 100%;
+    #flexWrapper {
+        width: 100%;
     }
-
 
     #displayProducts {
         display              : grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        // width       : auto;
-        // flex-wrap   : wrap;
-
+        grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
+        transition           : 0.3s ease;
+        padding              : 5px 15px;
     }
 
     .productDiv {
-        box-sizing : border-box;
-        width      : 100%;
+        img {
+            width: 70%;
+        }
+
         height     : auto;
-        line-height: 1.8;
+        width      : auto;
+        box-sizing : border-box;
+        margin     :5px;
     }
 
-    // #image {
-    //     // min-width: 200px;
-    // }
-
-    #phoneData {
-        padding       : 10px;
-        height        : auto;
-        display       : flex;
-        flex-direction: column;
-        align-content : stretch;
+    .productDiv:hover {
+        box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
+        transform : none;
     }
 
+    .displayMargin {
+        margin-left: 210px;
+    }
+
+    .revealSidebar {
+        left: 0;
+    }
 }
 
-//
+#phoneData {
+    padding       : 10px;
+    height        : auto;
+    display       : flex;
+    flex-direction: column;
+    align-content : stretch;
+}
 
+//CHECKBOX
 /* The container */
 .container {
     // border:2px solid black;
-      display: block;
-      position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      font-size: 18px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    
-    /* Hide the browser's default checkbox */
-    .container input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-    
-    /* Create a custom checkbox */
-    .checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 22px;
-      width: 22px;
-      background-color: #eee;
-      border-radius:2px;
-    }
-    
-    /* On mouse-over, add a grey background color */
-    .container:hover input ~ .checkmark {
-      background-color: #ccc;
-    }
-    
-    /* When the checkbox is checked, add a blue background */
-    .container input:checked ~ .checkmark {
-      background-color: lightgray;
-    }
-    
-    /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-    
-    /* Show the checkmark when checked */
-    .container input:checked ~ .checkmark:after {
-      display: block;
-    }
-    
-    /* Style the checkmark/indicator */
-    .container .checkmark:after {
-      left: 7px;
-      top: 3px;
-      width: 5px;
-      height: 10px;
-      border: 1px solid black;
-      border-width: 0px 2px 2px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
+    display            : block;
+    position           : relative;
+    padding-left       : 35px;
+    margin-bottom      : 12px;
+    cursor             : pointer;
+    font-size          : 18px;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+}
 
-  
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity : 0;
+    cursor  : pointer;
+    height  : 0;
+    width   : 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    height          : 22px;
+    width           : 22px;
+    background-color: rgba(255, 255, 255, 0.959);
+    box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.45);
+
+    border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+// .container input:checked~.checkmark {
+//     // background-color: lightgray;
+// }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content : "";
+    position: absolute;
+    display : none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left             : 7px;
+    top              : 3px;
+    width            : 5px;
+    height           : 10px;
+    border           : 1px solid $iconColor;
+    border-width     : 0px 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform    : rotate(45deg);
+    transform        : rotate(45deg);
+}
+
+.starsOuter {
+    position: relative;
+    display : inline-block;
+}
+
+.starsOuter::before {
+    content    : "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color      : #ccc;
+}
+
+.starsInner {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    white-space: nowrap;
+    overflow   : hidden;
+    // width:70%;
+}
+
+.starsInner::before {
+    content    : "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color      : #f8ce0b;
+}
