@@ -13,7 +13,7 @@
         <nav>
             <div id="navDiv">
                 <div id="mainMenu" class="dropdown">
-                    <button class="dropbtn"><i class="fas fa-bars"></i></button>
+                    <i class="fas fa-bars"></i>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
@@ -23,13 +23,13 @@
                 </div>
 
                 <div id="logo">
-                    <a href="#"><img src="./Lunaris.png"
-                        alt="logo" width="140px"></a>
+                    <a href="#"><img src="./logoPng.png" alt="logo" width="90px"></a>
                 </div>
 
                 <div id="searchBox">
                     <input type="text" id="search" placeholder="Search...">
                     <i class="fas fa-search"></i>
+                    </input>
                 </div>
 
                 <div>
@@ -38,13 +38,19 @@
 
                 <div id="shoppingCart">
                     <i class="fas fa-shopping-cart"></i>
+                    <div id="wrapperCart" class="hideCart" >
+                        <div class="cart">
+                            There Are No Products In Your Cart
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
         </nav>
 
         <div id="poster">
-            <img src="./poster.png" alt="">
+            <img src="./banner.png" alt="">
         </div>
 
         <div id="bodyContent">
@@ -52,12 +58,12 @@
             <div id="sortHeader">
 
                 <div id="hideBtn">
-                    <button id="toggleFilters"><i class="fas fa-sliders-h"></i></button>
+                    <button id="toggleFilters"><i class="fas fa-sliders-h"><span>Filter</span></i></button>
                 </div>
 
                 <div>
                     <div id="sortByDiv">
-                        <label for="sortBy">Sort By :</label>
+                        <label for="sortBy">Sort by:</label>
                         <select name="sortBy" id="select">
                             <option value="relevance">Relevance</option>
                             <option value="priceAscending">Price Ascending</option>
@@ -68,7 +74,7 @@
                     </div>
 
                     <div id="viewType">
-                        <i class="fas fa-align-justify"></i>
+                        <!-- <i class="fas fa-align-justify"></i> -->
                         <i class="fas fa-th-large"></i>
                     </div>
                 </div>
@@ -79,7 +85,7 @@
                     <div class="sideClass">
                         <div id="ratingFilter">
                             <h6>
-                                Minim Rating
+                                Minimum Rating
                                 <button class="rotateClass"><i class="fas fa-caret-down "></i></button>
                             </h6>
 
@@ -125,7 +131,7 @@
                         <div id="memoryFilter">
 
                             <h6>
-                                Memory Capacity
+                                Storage
                                 <button class="rotateClass"><i class="fas fa-caret-down "></i></button>
                             </h6>
                             <!-- NAME DE SCHIMBAT? -->

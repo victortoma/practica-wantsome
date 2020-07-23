@@ -3,318 +3,411 @@ const jsonArray = [
         photo: "./images/Apple iPhone XS 256GB Space Grey.jpg",
         rating: 4.6,
         review: 679,
-        name: "Apple iPhone XS 256GB Space Grey",
-        memory: "32",
+        name: "iPhone XS 256GB Space Grey",
+        brand: "Apple ",
+        memory: "256",
         price: 999,
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone XS Max 256GB Silver.jpg",
         rating: 3.8,
         review: 279,
-        name: "Apple iPhone XS Max 256GB Silver",
-        memory: "64",
+        name: "iPhone XS Max 256GB Silver",
+        brand: "Apple ",
+        memory: "256",
         price: 1009,
+        quantity: 1
     },
     {
-        photo: "./images/Apple iPhone 8 Plus 64GB 4G Silver.jpg",
+        photo: "./images/Apple iPhone 7 32GB 4G Black.jpg",
         rating: 3.4,
         review: 379,
-        name: "Apple iPhone 8 Plus 64GB 4G Silver",
-        memory: "128",
+        name: "iPhone 7 32GB 4G Black",
+        brand: "Apple ",
+        memory: "32",
         price: 799,
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone XR Dual Sim 64GB Red.jpg",
         rating: 3,
         review: 379,
-        name: "Apple iPhone XR Dual Sim 64GB Red",
-        memory: "256",
+        name: "iPhone XR Dual Sim 64GB Red",
+        brand: "Apple ",
+        memory: "64",
         price: 899,
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone X 64GB 4G Space Grey.jpg",
         rating: 4,
         review: 479,
-        name: "Apple iPhone X 64GB 4G Space Grey",
+        name: "iPhone X 64GB 4G Space Grey",
+        brand: "Apple ",
         memory: "64",
         price: 999,
+
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone 11 64GB Yellow.jpg",
         rating: 4.5,
         review: 579,
-        name: "Apple iPhone 11 64GB Yellow",
-        memory: "128",
+        name: "iPhone 11 64GB Yellow",
+        brand: "Apple ",
+        memory: "64",
         price: 1040,
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone 11 Pro 64GB Gold.jpg",
         rating: 4.9,
         review: 679,
-        name: "Apple iPhone 11 Pro 64GB Gold",
-        memory: "32",
+        name: "iPhone 11 Pro 64GB Gold",
+        brand: "Apple ",
+        memory: "64",
         price: 1299,
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone 11 128GB Purple.jpg",
         rating: 2.6,
         review: 779,
-        name: "Apple iPhone 11 128GB Purple",
-        memory: "32",
+        name: "iPhone 11 128GB Purple",
+        brand: "Apple ",
+        memory: "128",
         price: 699,
+
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone SE 2 64GB 4G Black.jpg",
         rating: 3.8,
         review: 879,
-        name: "Apple iPhone SE 2 64GB 4G Black",
-        memory: "128",
+        name: "iPhone SE 2 64GB 4G Black",
+        brand: "Apple ",
+        memory: "64",
         price: 899,
+
+        quantity: 1
     },
     {
         photo: "./images/Apple iPhone 11 Pro 128GB Space Grey.jpg",
         rating: 2,
         review: 979,
-        name: "Apple iPhone 11 Pro 128GB Space Grey",
-        memory: "64",
+        name: "iPhone 11 Pro 128GB Space Grey",
+        brand: "Apple ",
+        memory: "128",
         price: 699,
+        quantity: 1
 
     },
     {
         photo: "./images/Huawei Y7 Dual SIM 32GB 4G Coral Red.jpg",
         rating: 2.3,
         review: 1079,
-        name: "Huawei Y7 Dual SIM 32GB 4G Coral Red",
+        name: "Y7 Dual SIM 32GB 4G Coral Red",
+        brand: "Huawei ",
         memory: "32",
         price: 599,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei P20 Pro Dual SIM 64GB 6GB RAM Twilight.jpg",
         rating: 1.5,
         review: 1179,
-        name: "Huawei P20 Pro Dual SIM 64GB 6GB RAM Twilight",
-        memory: "32",
+        name: "P20 Pro Dual SIM 64GB 6GB RAM Twilight",
+        brand: "Huawei ",
+        memory: "64",
         price: 499,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei P40 Pro Dual SIM 256GB 8GB RAM Silver Frost.jpg",
         rating: 2.6,
         review: 779,
-        name: "Huawei P40 Pro Dual SIM 256GB 8GB RAM Silver Frost",
-        memory: "32",
+        name: " P40 Pro Dual SIM 256GB 8GB RAM Silver Frost",
+        brand: "Huawei",
+        memory: "256",
         price: 699,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei Nova 5T Dual SIM 128GB 6GB RAM Black.jpg",
         rating: 3.8,
         review: 879,
-        name: "Huawei Nova 5T Dual SIM 128GB 6GB RAM Black",
+        name: " Nova 5T Dual SIM 128GB 6GB RAM Black",
+        brand: "Huawei",
         memory: "128",
         price: 899,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei Nova 5T Dual SIM 32GB 6GB RAM Midsummer Purple.jpg",
         rating: 2,
         review: 979,
-        name: "Huawei Nova 5T Dual SIM 32GB 6GB RAM Midsummer Purple",
-        memory: "64",
+        name: "Nova 5T Dual SIM 32GB 6GB RAM Midsummer Purple",
+        brand: "Huawei ",
+        memory: "32",
         price: 699,
+        quantity: 1
 
     },
     {
         photo: "./images/Huawei Y6P Dual SIM 32GB 4G Midnight Black.jpg",
         rating: 2.3,
         review: 1079,
-        name: "Huawei Y6P Dual SIM 32GB 4G Midnight Black",
+        name: "Y6P Dual SIM 32GB 4G Midnight Black",
+        brand: "Huawei ",
         memory: "32",
         price: 599,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei P30 Pro Dual SIM 256GB 8GB Aurora Blue.jpg",
         rating: 1.5,
         review: 1179,
-        name: "Huawei P30 Pro Dual SIM 256GB 8GB Aurora Blue",
-        memory: "32",
+        name: "P30 Pro Dual SIM 256GB 8GB Aurora Blue",
+        brand: "Huawei ",
+        memory: "256",
         price: 499,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei P30 Lite Dual SIM 128GB 4G Pearl White.jpg",
         rating: 2.6,
         review: 779,
-        name: "Huawei P30 Lite Dual SIM 128GB 4G Pearl White",
-        memory: "32",
+        name: "P30 Lite Dual SIM 128GB 4G Pearl White",
+        brand: "Huawei ",
+        memory: "128",
         price: 699,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei Mate XS Dual SIM 256GB 8GB RAM Interstellar Blue.jpg",
         rating: 3.8,
         review: 879,
-        name: "Huawei Mate XS Dual SIM 256GB 8GB RAM Interstellar Blue",
-        memory: "128",
+        name: "Mate XS Dual SIM 256GB 8GB RAM Interstellar Blue",
+        brand: "Huawei ",
+        memory: "256",
         price: 899,
+
+        quantity: 1
     },
     {
         photo: "./images/Huawei P40 Lite Dual SIM 128GB 6GB RAM Sakura Pink.jpg",
         rating: 2,
         review: 979,
-        name: "Huawei P40 Lite Dual SIM 128GB 6GB RAM Sakura Pink",
-        memory: "64",
+        name: "P40 Lite Dual SIM 128GB 6GB RAM Sakura Pink",
+        brand: "Huawei ",
+        memory: "128",
         price: 699,
+        quantity: 1
 
     },
     {
         photo: "./images/Samsung Galaxy A30s Dual SIM 64GB 4G White.jpg",
         rating: 2.3,
         review: 1079,
-        name: "Samsung Galaxy A30s Dual SIM 64GB 4G White",
-        memory: "32",
+        name: "A30s Dual SIM 64GB 4G White",
+        brand: "Samsung ",
+        memory: "64",
         price: 599,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy Note 8 64GB 6GB RAM Gold.jpg",
         rating: 1.5,
         review: 1179,
-        name: "Samsung Galaxy Note 8 64GB 6GB RAM Gold",
-        memory: "32",
+        name: "Note 8 64GB 6GB RAM Gold",
+        brand: "Samsung ",
+        memory: "64",
         price: 499,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy S10e Dual SIM 128GB 6GB RAM Cardinal Red.jpg",
         rating: 2.6,
         review: 779,
-        name: "Samsung Galaxy S10e Dual SIM 128GB 6GB RAM Cardinal Red",
-        memory: "32",
+        name: "S10e Dual SIM 128GB 6GB RAM Cardinal Red",
+        brand: "Samsung",
+        memory: "128",
         price: 699,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy Note 9 Dual SIM 256GB 8GB RAM Ocean Blue.jpg",
         rating: 3.8,
         review: 879,
-        name: "Samsung Galaxy Note 9 Dual SIM 256GB 8GB RAM Ocean Blue",
-        memory: "128",
+        name: "Note 9 Dual SIM 256GB 8GB RAM Ocean Blue",
+        brand: "Samsung ",
+        memory: "256",
         price: 899,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy S9 Dual SIM 64GB Purple.jpg",
         rating: 2,
         review: 979,
-        name: "Samsung Galaxy S9 Dual SIM 64GB Purple",
+        name: "S9 Dual SIM 64GB Purple",
+        brand: "Samsung ",
         memory: "64",
         price: 699,
+        quantity: 1
 
     },
     {
         photo: "./images/Samsung Galaxy S20 Plus Dual SIM 128GB 12GB RAM Aura Red.jpg",
         rating: 2.3,
         review: 1079,
-        name: "Samsung Galaxy S20 Plus Dual SIM 128GB 12GB RAM Aura Red",
-        memory: "32",
+        name: "S20 Plus Dual SIM 128GB 12GB RAM Aura Red",
+        brand: "Samsung ",
+        memory: "128",
         price: 599,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy S20 Ultra Dual SIM 128GB 12GB RAM Cosmic Gray.jpg",
         rating: 1.5,
         review: 1179,
-        name: "Samsung Galaxy S20 Ultra Dual SIM 128GB 12GB RAM Cosmic Gray",
-        memory: "32",
+        name: "S20 Ultra Dual SIM 128GB 12GB RAM Cosmic Gray",
+        brand: "Samsung ",
+        memory: "128",
         price: 499,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy Note 10 Plus 256GB 12GB RAM Aura Glow.jpg",
         rating: 2,
         review: 979,
-        name: "Samsung Galaxy Note 10 Plus 256GB 12GB RAM Aura Glow",
-        memory: "64",
+        name: "Note 10 Plus 256GB 12GB RAM Aura Glow",
+        brand: "Samsung ",
+        memory: "256",
         price: 699,
+        quantity: 1
 
     },
     {
         photo: "./images/Samsung Galaxy S10 Dual SIM 256GB 8GB RAM Green.jpg",
         rating: 2.3,
         review: 1079,
-        name: "Samsung Galaxy S10 Dual SIM 256GB 8GB RAM Green",
-        memory: "32",
+        name: "S10 Dual SIM 256GB 8GB RAM Green",
+        brand: "Samsung ",
+        memory: "256",
         price: 599,
+
+        quantity: 1
     },
     {
         photo: "./images/Samsung Galaxy Z Flip Dual SIM 256GB 8GB RAM Mirror Purple.jpg",
         rating: 1.5,
         review: 1179,
-        name: "Samsung Galaxy Z Flip Dual SIM 256GB 8GB RAM Mirror Purple",
-        memory: "32",
+        name: "Z Flip Dual SIM 256GB 8GB RAM Mirror Purple",
+        brand: "Samsung ",
+        memory: "256",
         price: 499,
+        quantity: 1
     }
 ]
 
+let filtersObject = {
+    memory: {
+        "32": "32",
+        "64": "64",
+        "128": "128",
+        "256": "256"
+    },
+    price: 1301,
+    rating: 1
+}
+
+let cartArray = []
+
 const displayProducts = document.querySelector('#displayProducts');
-const search = document.querySelector('#search')
-const select = document.querySelector('#select')
-
-//functii  de adaugare in DOM
-
-const imgFn = (obj) => {
-    const img = document.createElement('img');
-    img.src = obj.photo;
-    // img.style.width = '90%';
-    return img;
-}
-
-const ratingFn = (obj) => {
-    let div = document.createElement('div');
-    let divStarsOuter = document.createElement('div');
-    let divStarsInner = document.createElement('div');
-    let span = document.createElement('span')
-
-    div.appendChild(divStarsOuter)
-    divStarsOuter.appendChild(divStarsInner)
-    div.appendChild(span)
-    span.innerText = `${obj.review} reviews `;
-    div.classList.add("phoneRating");
-    divStarsOuter.classList.add("starsOuter");
-    divStarsInner.classList.add("starsInner");
-    divStarsInner.style.width = `${obj.rating / 5 * 100}%`
-    // console.log(obj.rating)
-    return div;
-}
-
-const descriptionFn = (obj) => {
-    let div = document.createElement('div');
-    div.innerHTML = obj.name;
-    div.classList.add("phoneDescription");
-    return div;
-}
-
-const priceFn = (obj) => {
-    let div = document.createElement('div');
-    div.innerHTML = obj.price;
-    div.classList.add("phonePrice");
-    return div;
-}
-
-const buttonFn = () => {
-    let buttonDiv = document.createElement('div');
-    const button = document.createElement('button');
-    button.innerText = "Add to Cart"
-    buttonDiv.appendChild(button);
-    buttonDiv.classList.add("buyPhone");
-    button.addEventListener('click', (() => console.log('Added to cart')));
-    return buttonDiv;
-}
-
-//REMOVE
-
-const removeDataFromDom = () => [...document.querySelectorAll(".productDiv")].forEach(product => product.remove())// REMOVE DATA FROM DOM 
-
-//SORTING
-
+const searchInput = document.querySelector('#search');
+const selectInput = document.querySelector('#select');
+const cart = document.querySelector(".cart");
 let populatingDomArray = [] // array care preia itemele din jsonArray
 let rememberDomArray = [] //array pentru a reveni la datele initiale
 
+const memoryCheckboxes = document.querySelectorAll("#memoryFilter > label > input[type=checkbox]")
+const priceCheckboxes = document.querySelectorAll("#priceFilter > label > input[type=checkbox]")
+const starsCheckboxes = document.getElementsByName('stars')
+const allCheckboxes = [...memoryCheckboxes, ...priceCheckboxes, ...starsCheckboxes]
+console.log(allCheckboxes)
+
+//functii  de adaugare in DOM
+
+const imgFn = (product) => {
+    const img = document.createElement('img');
+    img.src = product.photo;
+    return img;
+}
+
+//fn pentru rating Produsului
+const ratingFn = (product) => {// 
+    let div = document.createElement('div');
+    let divStarsOuter = document.createElement('div');
+    let divStarsInner = document.createElement('div');
+    let span = document.createElement('span');
+
+    div.appendChild(divStarsOuter);
+    divStarsOuter.appendChild(divStarsInner);
+    div.appendChild(span);
+    span.innerText = `${product.review} reviews `;// adauga in span numar de reviewri
+    div.classList.add("phoneRating");
+    divStarsOuter.classList.add("starsOuter");
+    divStarsInner.classList.add("starsInner");
+    divStarsInner.style.width = `${product.rating / 5 * 100}%`;// fill inside stars
+    // console.log(product.rating)
+    return div;
+}
+
+//fn descriere nume si brand
+const descriptionFn = (product) => {
+    let div = document.createElement('div');
+    div.innerHTML = product.brand + product.name;
+    div.classList.add("phoneDescription");
+    return div;
+}
+//fn pret
+const priceFn = (product) => {
+    let div = document.createElement('div');
+    div.innerHTML = `$${product.price}`;
+    div.classList.add("phonePrice");
+    return div;
+}
+//
+const buttonFn = (actionFn, innerText) => {
+    let buttonDiv = document.createElement('div');
+    const button = document.createElement('button');
+    button.innerText = innerText
+    buttonDiv.appendChild(button);
+    buttonDiv.classList.add("buyPhone");
+    button.addEventListener('click', actionFn);
+    return buttonDiv;
+}
+
+//REMOVE 
+const removeDataFromDom = () => [...document.querySelectorAll(".productDiv")].forEach(product => product.remove())// REMOVE DATA FROM DOM 
+//Fn de adaugare a produselor in DOM
 const populateDataInDom = (array) => {
 
     populatingDomArray = []
-    // let productDiv;
-
     for (let product of array) {
 
         let productDiv = document.createElement('div');
@@ -329,101 +422,113 @@ const populateDataInDom = (array) => {
         infoDiv.appendChild(ratingFn(product));
         infoDiv.appendChild(descriptionFn(product));
         infoDiv.appendChild(priceFn(product));
-        infoDiv.appendChild(buttonFn());
+        infoDiv.appendChild(buttonFn(addToCart, "ADD TO CART"));
 
-        populatingDomArray.push(product)
+        populatingDomArray.push(product);
     }
-
     return populatingDomArray;
 };
+//fn de adaugare a produsului in Cart
+
+const addToCart = (item) => {
+
+    const productName = item.target.parentElement.previousElementSibling.previousElementSibling.innerText;//valoarea numelui  pentru a gasi produsul in jsonArray
+    cart.innerHTML = ""; // golim Cartul
+    const jsonProduct = jsonArray.find(product => `${product.brand + product.name}` === productName);// produsul ce urmeaza a fi adaugat
+    if (cartArray.length > 0) {
+        if (cartArray.find(item => item.name === jsonProduct.name)) {
+            alert("Product Already In Cart");
+            return populateDataInCart(cartArray);
+        }
+    }
+    cartArray.push(jsonProduct);
+    return populateDataInCart(cartArray)
+}
 
 // SEARCH
+const removeAllCheck = () => allCheckboxes.forEach(checkbox => {
+    checkbox.checked = false;
+    filtersObject = {
+        memory: {
+            "32": "32",
+            "64": "64",
+            "128": "128",
+            "256": "256"
+        },
+        price: 1301,
+        rating: 1
+    }
+}
+)
 
 const searchFunction = searchText => {//de facut search dupa MEMORIE
-    const regex = new RegExp(`^${searchText}`, 'gi')
+    const regex = new RegExp(`^${searchText}`, 'gi');
 
-    populatingDomArray = jsonArray.filter((item) => item.name.match(regex)) // item.name.toLowerCase().includes("ip")
-    removeDataFromDom()
+    let populatingDomArray = jsonArray.filter((item) => item.name.match(regex) ||
+        item.brand.match(regex));
+    removeDataFromDom();
+    removeAllCheck();
     if (populatingDomArray.length === 0) {
-        alert("Your search didn't match our products")
-        return populateDataInDom(jsonArray)
+        alert("Your search didn't match our products");
+        return populateDataInDom(jsonArray);
     }
-    // modificat
-
-    populateDataInDom(populatingDomArray)
-    rememberDomArray = [...populatingDomArray]// adaugat
-    return rememberDomArray
+    populateDataInDom(populatingDomArray)//prima apelare a PopulateData
+    rememberDomArray = [...populatingDomArray];//array pentru a reda ultima cautare
+    return rememberDomArray;
 }
 
-searchFunction("")
+searchFunction("");// prima apelarea a populateData
 
-const filterPrice = (array) => array.sort((a, b) => a.price - b.price)
-const filterPriceDescending = (array) => array.sort((a, b) => b.price - a.price)
-const filterReview = (array) => array.sort((a, b) => b.review - a.review)
-
+// fn pentru optiunile select 
 const sortBy = () => {
-    // if(select.value=== "relevance"){ // DE REVAZUT
-    //     removeDataFromDom()
-    //     console.log(populatingDomArray)
-    //     populateDataInDom(jsonArray)
-    // }
-    if (select.value === "priceAscending") {//switch
-        removeDataFromDom()
-        populateDataInDom(filterPrice(populatingDomArray))
+
+    if (selectInput.value === "relevance") { // DE REVAZUT
+        removeDataFromDom();
+        populateDataInDom(jsonArray);
     }
 
-    else if (select.value === "priceDescending") {
-        removeDataFromDom()
-        populateDataInDom(filterPriceDescending(populatingDomArray))
+    if (selectInput.value === "priceAscending") {//switch
+        removeDataFromDom();
+        populateDataInDom(filterPrice(populatingDomArray));
     }
 
-    else if (select.value === "reviewNumbers") {
-        removeDataFromDom()
-        populateDataInDom(filterReview(populatingDomArray))
+    else if (selectInput.value === "priceDescending") {
+        removeDataFromDom();
+        populateDataInDom(filterPriceDescending(populatingDomArray));
+    }
+
+    else if (selectInput.value === "reviewNumbers") {
+        removeDataFromDom();
+        populateDataInDom(filterReview(populatingDomArray));
     }
 }
 
-// console.log(populatingDomArray)
+selectInput.addEventListener("change", sortBy);
 
-select.addEventListener('change', sortBy)
-search.addEventListener("keyup", () => {// Search ENTER
+searchInput.addEventListener("keyup", () => {// Search ENTER
     if (event.keyCode === 13) {
-        searchFunction(search.value)
-        search.value = ""
+        searchFunction(search.value);
+        search.value = "";
         return true;
     }
     return false;
 })
 
 //FILTER
-
-let filtersObject = {
-    memory: {
-        "32": "32",
-        "64": "64",
-        "128": "128",
-        "256": "256"
-    },
-    price: 1301,
-    rating: 1
-}
+//Functii pentru sortari select area
+const filterPrice = (array) => array.sort((a, b) => a.price - b.price);
+const filterPriceDescending = (array) => array.sort((a, b) => b.price - a.price);
+const filterReview = (array) => array.sort((a, b) => b.review - a.review);
 
 // FILTRARI CHECKBOXEs
 
-const memoryCheckboxes = document.querySelectorAll("#memoryFilter > label > input[type=checkbox]")
-const priceCheckboxes = document.querySelectorAll("#priceFilter > label > input[type=checkbox]")
-const starsCheckboxes = document.getElementsByName('stars')
-console.log(starsCheckboxes)
-
 const checkRatingFn = () => {
-    let checkboxArray = []
+    let checkboxArray = [];
 
     starsCheckboxes.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxArray.push(checkbox)
-
-            filtersObject.rating = Number(checkbox.value)
-            console.log(filtersObject)
+            checkboxArray.push(checkbox);
+            filtersObject.rating = Number(checkbox.value)// modifica valoarea ratingului din filterObj
         }
     })
     if (checkboxArray.length < 1) {
@@ -437,58 +542,33 @@ const checkMemoryFn = () => { // 0 checked filterMemory
     memoryCheckboxes.forEach(checkbox => {
 
         if (checkbox.checked) {
-            // console.log(product["memory"])
-            let matches = rememberDomArray.filter(product => {
-                // console.log(product["memory"])
-                return product["memory"] === checkbox.value
-            })
-            // console.log(matches)
-            if (matches.length === 0) {//ALERT NO MATCHES FOR SEARCH
-                alert("No matches for your search")
-                return checkbox.checked = false// if no matches for search, uncheck the checkbox
-            }
+
             checkboxArray.push(checkbox)
             filtersObject.memory[checkbox.value] = checkbox.value
-            // console.log(filtersObject)
         }
-        // console.log(checkboxArray)
         else filtersObject.memory[checkbox.value] = ""
-        // console.log(checkboxArray.length)
     })
+
     if (checkboxArray.length < 1) {//when all memory checkboxes are unchecked, fill obj parameters for filter
         filtersObject.memory["32"] = "32";
         filtersObject.memory["64"] = "64";
         filtersObject.memory["128"] = "128";
         filtersObject.memory["256"] = "256";
     }
-    checkedFunction()
+    return checkedFunction()
 }
 
 const checkPriceFn = () => {
-    let checkboxArray = []
+    let checkboxArray = [];
 
     priceCheckboxes.forEach(checkbox => {
         if (checkbox.checked) {
-            // let matches = populatingDomArray.filter(product => {
-
-            //     if (product.price > 1000) return product.price <= checkbox.value // if phone > 999 then return phones >
-
-            //     else return product.price <= checkbox.value &&
-            //         product.price >= checkbox.value - 200
-            // })
-            // console.log(matches)
-            // if (matches.length === 0) {//ALERT NO MATCHES FOR SEARCH
-            //     alert("No matches for your search")
-            //     return checkbox.checked = false// if no matches for search, uncheck the checkbox
-            // }
-            checkboxArray.push(checkbox)
-
-            filtersObject.price = Number(checkbox.value)
-            console.log(filtersObject)
+            checkboxArray.push(checkbox);
+            filtersObject.price = Number(checkbox.value);
         }
     })
     if (checkboxArray.length < 1) {
-        filtersObject.price = 1301
+        filtersObject.price = 1301;
     }
     checkedFunction()
 }
@@ -496,9 +576,8 @@ const checkPriceFn = () => {
 
 const filtersFn = (obj) => {//filtrare obiecte DOM
 
-    const x = rememberDomArray
+    const results = rememberDomArray
         .filter(product => {
-            // console.log(populatingDomArray)  
 
             return product.memory === obj.memory["32"]
                 || product.memory === obj.memory["64"]
@@ -507,25 +586,25 @@ const filtersFn = (obj) => {//filtrare obiecte DOM
         })
         .filter(product => {
             if (obj.price > 1300) {
-                return product.price < obj.price
+                return product.price < obj.price;
             }
             if (obj.price === 1300) {
-                return (obj.price - 300 < product.price && product.price < obj.price)
+                return (obj.price - 300 < product.price && product.price < obj.price);
             }
-            else { return obj.price - 200 < product.price && product.price < obj.price }
+            else { return obj.price - 200 < product.price && product.price < obj.price; }
         })
         .filter(product => product.rating >= obj.rating)
 
-    return x
+    return results
 }
 // DE FACUT FN GENUL ASTA SI PENTRU MEMORY, STARS
 const checkedFunction = (checkbox) => {
-
     removeDataFromDom()
-
     populateDataInDom(filtersFn(filtersObject))
     if (populatingDomArray.length < 1) {
-        alert("adsadsadada")
+        alert("No matches for your search")
+        removeAllCheck()
+        populateDataInDom(rememberDomArray)
     }
     return
 }
@@ -553,41 +632,136 @@ memoryFilterDiv.addEventListener('change', checkMemoryFn);
 priceFilterDiv.addEventListener('change', checkPriceFn)
 ratingFilterDiv.addEventListener('change', checkRatingFn)
 
-const hideSidebar = () => {
+
+//CART
+
+cart.addEventListener("click", () => {// in cazul in care produsele sunt scoase din CArt
+    let wrapperCart = document.querySelector("#wrapperCart")
+    if (cartArray.length < 1) {// daca e gol arrayul
+        cart.innerHTML = "There Are No Products In Your Cart"
+        return wrapperCart.classList.toggle("hideCart")// shimbam clasa pentru a ascunde Cartul
+    }
+    return
+})
+
+const removeFromCart = (item) => {// remove product from cartArray
+
+    const productName = item.target.parentElement.previousElementSibling.previousElementSibling.innerText
+    let productIndex = cartArray.indexOf(cartArray.find(product => `${product.brand + product.name}` === productName))
+    cartArray.splice(productIndex, 1)
+
+    return populateDataInCart(cartArray)
+}
+// functie pentru ascunderea sidebarului in mod tableta
+const hideCartFn = (event) => { // fn de ascundere a Cartului
+    let cart = document.querySelector("#wrapperCart")
+    cart.classList.toggle("hideCart")
+    event.stopPropagation()
+}
+
+// fn de calcul pentru cart
+const totalPriceFn = (array) => array.reduce(function (total, product) {
+
+    return total + product.price * Number(product.quantity);
+}, 0);
+
+const populateDataInCart = (array) => {
+    populatingCartArray = []
+    cart.innerHTML = ""
+    //buton inchidere cart
+    closeBtn = document.createElement('button');// BUTON pentru inchidere
+    cart.appendChild(closeBtn)
+    closeBtn.classList.add("closeBtn")
+    closeBtn.addEventListener("click", hideCartFn)
+
+    for (let product of array) {
+        // console.log(product)
+        let productDiv = document.createElement('div');
+        imgDiv = document.createElement('div');
+        infoDiv = document.createElement('div');
+        productDiv.classList.add("productDivCart");
+
+        cart.appendChild(productDiv);//adaugarea obiectelor in dom
+        productDiv.appendChild(imgDiv)
+        productDiv.appendChild(infoDiv)
+        imgDiv.appendChild(imgFn(product));
+        // infoDiv.appendChild(ratingFn(product));
+        infoDiv.appendChild(descriptionFn(product));
+        infoDiv.appendChild(quantityFn(product))
+        infoDiv.appendChild(priceFn(product));
+        infoDiv.appendChild(buttonFn(removeFromCart, "Remove"));
+        populatingCartArray.push(product)
+    }
+    //buton Total Price
+
+    //icon span numar obiecte cart
+    iconSpan = document.createElement('span');
+    const icon = document.querySelector(".fa-shopping-cart")
+    icon.innerHTML = "";// remove spans
+    icon.appendChild(iconSpan)// adauga span pentru cart numar de obiecte
+    iconSpan.innerHTML = cartArray.length
+
+    totalPrice = document.createElement('button');
+    totalPrice.classList.add("totalPrice")
+    totalPrice.innerHTML = `Total Price: $${totalPriceFn(array)} BUY NOW!`
+    totalPrice.addEventListener("click", () => {
+        alert("THANK YOU FOR YOUR PURCHASE!")
+        cartArray = [];
+        icon.innerHTML = ""
+    })
+    cart.appendChild(totalPrice)
+    return populatingCartArray
+};
+//fn care schimba cantitatea de obiecte ce urmeaza a fi cumparata
+const quantityFn = (product) => {
+
+    let div = document.createElement('div')
+    let input = document.createElement('input')
+    input.setAttribute("type", "number")
+    input.setAttribute("value", `${product.quantity}`)
+    input.setAttribute("min", 1)
+    input.setAttribute("max", 99)
+    input.addEventListener("change", () => {
+        if (input.value < 1 || input.value > 99) {
+            alert('Please select a value between 1 to 99')
+            return input.value = "1"
+        }
+        product.quantity = input.value // valoarea inputului schimba valoarea cantitaii produsului din obiect
+        return populateDataInCart(cartArray)
+    })
+    div.appendChild(input)
+    return div
+}
+
+// populateDataInCart(cartArray)
+
+document.querySelector(".fa-shopping-cart").addEventListener("click", hideCartFn)
+// 
+const hideSidebarFn = () => {
 
     let hideSidebar = document.querySelector(".sideBar")
     let displayProducts = document.querySelector("#displayProducts")
-    if (window.innerWidth > 1000) {
-        console.log("hehehehee")
-        //  return hideSidebar.classList.remove("revealSidebar") 
-    }
     hideSidebar.classList.toggle("revealSidebar")
     displayProducts.classList.toggle("displayMargin")
-
 }
-// hideSidebar()
-// hideSidebar()
+
+const toggleBtn = document.querySelector("#toggleFilters")
+toggleBtn.addEventListener('click', hideSidebarFn)
+
 window.addEventListener('resize', function () {
+
     let hideSidebar = document.querySelector(".sideBar")
-    console.log(hideSidebar)
     let displayProducts = document.querySelector("#displayProducts")
-    console.log(hideSidebar.classList.contains("revealSidebar"))
-    if (window.innerWidth > 1000) {
+
+    if (window.innerWidth > 1000) {// de revazut
         if (hideSidebar.classList.contains("revealSidebar")) {
-            console.log("hehehehee")
             hideSidebar.classList.remove("revealSidebar")
             return displayProducts.classList.remove("displayMargin")
         }
     }
 })
 
-window.addEventListener("scroll", function (){
-    console.log('dadsada')
-    console.log(document.querySelector('#navDiv'))
-    document.querySelector('#navDiv').classList.toggle('reduceTransparency')
-    document.querySelector('#sortHeader').classList.toggle('reduceTransparency')
-})
-// console.log(document.getElementsByClassName(""))
+//functia de minimizare pentru filter
 const rotateClass = document.querySelectorAll(".rotateClass")
 // console.log(rotateClass)
 rotateClass.forEach(item => {
@@ -597,8 +771,6 @@ rotateClass.forEach(item => {
         return item.classList.toggle("rotateClass")
     })
 })
-// console.log("hasadsadsa")
-//add eventlistener TO DISPLAYPRODUCTS
-//MEHHHH
-const toggleBtn = document.querySelector("#toggleFilters")
-toggleBtn.addEventListener('click', hideSidebar)
+
+
+

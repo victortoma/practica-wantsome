@@ -1,371 +1,585 @@
-$mainColor          :#f2f3f7;
-$iconColor          : #43ada8;
-$backgroundColor    : #e4eee8;
-// $backgroundColor : rgba(228, 238, 232, 0.8);
-$shadow             :rgba(0, 0, 0, 0.45);
-$secondShadow       : rgba(0, 0, 0, 0.2);
-$whiteLight         : rgba(255, 255, 255, 0.85);
-$light              : rgba(255, 255, 255, 0.75);
-
+$mainColor                            :rgb(240, 245, 245);
+$hoverColor                           : rgb(211, 211, 211);
+$buttonColor                          : #3d537a;
+// $iconColor                         : #3d537a;
+$iconColor                            : #5469a1;
+$cherryColor                          : #DD1048;
+$backgroundColor                      : rgb(233, 240, 240);
+// $backgroundColor                : white;
+// $backgroundColor       : #d4d4d4;    
+$shadow                               :rgb(148, 148, 148);
+$light                                : rgb(255, 255, 255);
 
 * {
-
-    box-sizing       : border-box;
-    font-family      : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding          : 0px;
-    // font-size     : 16px;
-    line-height      : 1.1;
-}
-
-h6 {
-    display      : block;
-    // height: 20px;
-    font-size    : 16px;
-    // padding: 10px;
-    margin-top   : 3px;
-    margin-bottom: 10px;
+    color         : #4b4b4b;
+    font-weight   : 500;
+    box-sizing    : border-box;
+    font-family   : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // line-height: 1.1;
+    padding       : 0;
+    margin        : 0;
 }
 
 body {
-    background          : $backgroundColor;
-    // margin-left     : 10px;
-    margin              : 0;
-    // margin-right     : 10px;
-    display             : flex;
-    position            : relative;
+    background     : $backgroundColor;
+    display        : flex;
+    justify-content: center;
+    margin         : 0;
+    padding        : 0;
+    position       : relative;
+    overflow-x     : hidden;
+    // overflow-y:auto ;
+}
+
+button {
+    background-color   : $buttonColor;
+    border             : none;
+    // border-left     : 0.1px solid $light;
+    border-radius      : 5px;
+    // border-top      : 0.1px solid $light;
+    box-shadow         : -3px -3px 9px $light, 3px 3px 9px $shadow;
+    color              : $backgroundColor;
+    cursor             : pointer;
+    font-weight        : 600;
+    outline            : none;
+    padding            : 8px 10px;
+    position           : relative;
+    // color:black
+}
+
+button:active {
+    transform : scale(0.98);
+    transition: 0.02s ease-in;
+}
+
+button:hover {
+    background-color: #5469a1;
 }
 
 nav {
-    display        : flex;
-    justify-content: center;
-    position       : sticky;
-    top            : 0;
-    left           : 0;
-    height         : 75px;
-    z-index        : 3;
-    transition     : 0.5s;
-    width          : 100%;
-
-    i:hover {
-        background-color: gray;
-    }
-
-    #logo {
-        margin-left        : 5px;
-        margin-right       : 10px;
-        margin-top         : 2px;
-        width              : 200px;
-        // background-color: red;
-    }
+    background-color   : $backgroundColor;
+    display            : flex;
+    justify-content    : center;
+    left               : 0;
+    position           : sticky;
+    top                : 0;
+    // transition      : 0.5s;
+    width              : 100%;
+    z-index            : 3;
 }
 
 #navDiv {
-    // border          : 2px solid red;
-    align-items     : center;
-    background-color: $backgroundColor;
+    align-items  : center;
+    border-bottom: 0.5px solid $hoverColor;
+    display      : flex;
+    height       : 60px;
+    opacity      : 1;
+    padding      : 0 20px;
+    position     : sticky;
+    width        : 1240px;
 
-    display            : flex;
-    position           : sticky;
-    // box-shadow      : -3px -2px 2px $whiteLight, 3px 3px 5px $shadow;
-    border-bottom      : 0.5px solid rgba(0, 0, 0, 0.1);
-    // border-left     : 0.5px solid rgba(0, 0, 0, 0.05);
-    height             : 65px;
-    padding            : 0 20px;
-    opacity            : 1;
-    width              : 1240px;
+    #logo {
+        margin-right: 20px;
+        margin-left : 40px;
+        margin-top   : 25px;
+    }
 
     i {
+        // margin-right: 12px;
+        align-items     : center;
+        background-color: $mainColor;
+        border-left     : 0.1px solid $light;
+        border-radius   : 5px;
+        border-top      : 0.1px solid $light;
+        border-bottom   : 0.1px solid $mainColor;
+        border-right    : 0.1px solid $mainColor;
+
+        box-shadow     : -3px -3px 9px $light, 3px 3px 9px $shadow;
+        color          : $iconColor;
+        cursor         : pointer;
+        display        : flex;
+        font-size      : 20px;
+        height         : 35px;
+        justify-content: center;
+        margin-left    : 15px;
+        width          : 35px;
+    }
+
+    i:hover {
+        border          : none;
+        background-color: $hoverColor;
+        // transition: 0.3s;
+    }
+
+    #mainMenu {
+        margin       : 0;
+        display      : flex;
+        align-content: center;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        i {
+            margin-left: 0;
+        }
+    }
+
+    #searchBox {
+
+        align-items    : center;
+        display        : flex;
+        justify-content: center;
+        width          : 570px;
+        position       : relative;
+        margin-left    : auto;
+        margin-right   : auto;
+
+
+        #search {
+            background-color   : $mainColor;
+            border             : none;
+            border-bottom      : 0.1px solid $light;
+            border-right       : 0.1px solid $light;
+            border-radius      : 5px;
+            box-shadow         : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
+            height             : 35px;
+            outline            : none;
+            padding-left       : 10px;
+            width              : 100%;
+            // background-color: red;
+        }
+
+        // input type
+        i {
+            box-shadow      : none;
+            background-color: transparent;
+            border          : none;
+            width           : 30px;
+            height          : 30px;
+            position        : absolute;
+            right           : 5px;
+        }
+    }
+
+    //dropdown menu
+    .dropdown {
+        box-shadow : none;
+        cursor     : pointer;
+        display    : flex;
+        display    : inline-block;
+        // height  : 50px;
+        position   : relative;
+    }
+
+    .dropdown-content {
+        background-color: $mainColor;
+        border-radius: 5px;
+        box-shadow      : 2px 2px 10px $shadow;
+
+        display  : none;
+        left     : 0;
+        min-width: 300px;
+        position : absolute;
+        top      : 53px;
+    }
+
+    .dropdown-content a {
+        text-decoration: none;
+        display        : block;
+        padding        : 12px 16px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: $hoverColor;
+        // width: 200px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        // background-color: red;
+        align-content  : center;
+        display        : flex;
+        justify-content: flex-start;
+    }
+}
+
+//CART
+
+#shoppingCart {
+
+    i span {
+        background-color: $cherryColor;
+        color           : $mainColor;
+        position        : absolute;
+        border-radius   : 50%;
+        width           : 16px;
+        height          : 16px;
+        top             : 14px;
+        right           : 22px;
+        font-size       : 12px;
         display         : flex;
         justify-content : center;
         align-items     : center;
-        cursor          : pointer;
+    }
+}
+
+#wrapperCart {
+    height  : 0;
+    position: absolute;
+    padding : 0;
+    right   : 20px;
+    top     : 55px;
+
+    .cart {
         background-color: $mainColor;
-        color           : $iconColor;
-        font-size       : 20px;
-        width           : 40px;
-        height          : 30px;
-        margin-left     : 10px;
-        // margin-right: 12px;
-        border-radius   : 5px;
-        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
-        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
-        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+        box-shadow      : 2px 2px 10px $shadow;
+        border-radius             : 5px;
+        display                   : flex;
+        flex-direction            : column;
+        align-items               : flex-end;
+        overflow-y                : scroll;
+        padding                   : 15px;
+        // padding-top            : 40px;
+        max-height                : 600px;
+        width                     : auto;
+        position                  : relative;
+        overflow-y                : auto;
+
+        i span {
+            background-color: $cherryColor;
+            position        : absolute;
+            top             : -20px;
+            right           : 0px;
+            z-index         : 100;
+        }
+
+        button {
+            margin-right: 10px;
+        }
+
+        button.closeBtn {
+            color              : $buttonColor;
+            background-color   : $mainColor;
+            font-size          : 15px;
+            height             : 24px;
+            width              : 24px;
+            display            : flex;
+            align-items        : center;
+            justify-content    : center;
+            box-shadow: none;
+            margin-right       : 10px;
+        }
+
+        button.closeBtn:after {
+            content    : "\f102";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+        }
+    }
+}
+
+.productDivCart {
+    scroll-snap-align       : start;
+    position                : relative;
+    background              : transparent;
+    border-bottom           : 0.1px solid $hoverColor;
+    display                 : flex;
+    flex-direction          : row;
+    height                  : 150px;
+    justify-content         : space-between;
+    // margin               : 10px;
+    padding                 : 10px;
+    margin-bottom           : 10px;
+    position                : relative;
+    width                   : 460px;
+
+    img {
+        margin-left: 0;
+        width      : 130px;
     }
 
-    i:active {
-        transform : scale(0.97);
-        transition: 0.02s ease-in;
+    div:nth-of-type(2) {
+        // background-color: yellow;
+        width         : 310px;
+        display       : flex;
+        flex-direction: column;
+
+        input[type="number"] {
+
+            background-color: $mainColor;
+            border          : none;
+            border-bottom   : 0.1px solid $light;
+            border-radius   : 5px;
+            border-right    : 0.1px solid $light;
+            box-shadow      : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
+            color           : $buttonColor;
+            font-size       : 16px;
+            height          : 25px;
+            margin-bottom   : 5px;
+            margin-top      : 5px;
+            outline         : none;
+            padding-left    : 5px;
+            padding-right   : 2px;
+            width           : 40px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            height: 20px;
+        }
     }
 
-    #mainMenu i {
-        margin: 0;
+    div.phoneDescription {
+        height: 70px;
+    }
+
+    .phonePrice {
+        color        : $cherryColor;
+        font-size    : 20px;
+        margin-bottom: 8px;
+        width        : 100px;
     }
 
     button {
-        background-color: $backgroundColor;
+        background-color: transparent;
+        border-radius: 0;
+        // border-bottom:1px solid $hoverColor;
+        box-shadow:none;
+        color:$buttonColor;
+        padding            : 2px 10px;
+        width              : auto;
+        // background-color: red;
+        position           : absolute;
+        right              : 0;
+        bottom             : 14px;
     }
-
-    .reduceTransparency {
-        background-color: red;
-        transition      : 0.2s;
-    }
-}
-
-#searchBox {
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    width          : 100%;
-
-    #search {
-        background-color: $mainColor;
-        outline         : none;
-        border-radius   : 5px;
-        border          : 1px solid transparent;
-        height          : 35px;
-        width           : 90%;
-        box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.55);
-        border-bottom   : 0.5px solid rgba(0, 0, 0, 0.1);
-        border-right    : 0.5px solid rgba(0, 0, 0, 0.1);
-        padding-left    : 10px;
-
+    button:hover{
+        color: gray;
     }
 }
 
-//dropdown menu
-.dropbtn {
-    border         : none;
-    outline        : none;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    cursor         : pointer;
-    width          : 50px;
+.hideCart {
+    min-height: 0;
+    overflow  : hidden;
 }
 
-.dropdown {
-    display : inline-block;
-    display : flex;
-    cursor  : pointer;
-    position: relative;
-    height  : 50px;
-}
-
-.dropdown-content {
-    background-color: $mainColor;
-    display         : none;
-    position        : absolute;
-    left            : 0;
-    top             : 50px;
-    min-width       : 300px;
-    box-shadow      : 0px 8px 16px 0px $secondShadow;
-}
-
-.dropdown-content a {
-    text-decoration: none;
-    display        : block;
-    padding        : 12px 16px;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-    // width: 200px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-// .dropdown:hover .dropbtn {
-// background-color: #ccdbcd;
-// }
-
-.dropbtn {
-    // background-color: red;
-    display        : flex;
-    align-content  : center;
-    justify-content: flex-start;
-}
-
+//POSTER
 #poster img {
-    margin   : 0;
-    width    : 100%;
-    // height:250px;
-
+    height: 200px;
+    margin: 0;
+    width : 1500px;
 }
 
 // //middle
 #bodyContent {
-    margin-left    : auto;
-    margin-right   : auto;
-    box-sizing     : border-box;
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    margin-top     : 5px;
-    width          : 1240px;
+    box-sizing        : border-box;
+    display           : flex;
+    flex-direction    : column;
+    justify-content   : center;
+    margin-left       : auto;
+    margin-right      : auto;
+    // margin-top     : 5px;
+    width             : 1240px;
 }
 
 // hEADER
+
 #sortHeader {
-    background     : $backgroundColor;
-    display        : flex;
     align-items    : center;
-    width          : auto;
+    background     : $backgroundColor;
+    border-bottom  : 0.5px solid $hoverColor;
+    display        : flex;
+    height         : 50px;
     justify-content: space-between;
-    border-bottom  : 0.5px solid rgba(0, 0, 0, 0.1);
     padding        : 0 20px;
     position       : sticky;
-    top            : 63px;
+    top            : 59px;
+    width          : auto;
     z-index        : 2;
-    height         : 50px;
 
     #toggleFilters {
-        border : none;
-        outline: none;
-        cursor : pointer;
-        margin : 0;
-        width  : 50px;
-    }
-
-    i {
-        display         : flex;
-        justify-content : center;
-        align-items     : center;
-        color           : $iconColor;
-        background-color: $mainColor;
-        cursor          : pointer;
-        font-size       : 20px;
-        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
-        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
-        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
-        width           : 40px;
-        height          : 30px;
-        border-radius   : 5px;
-
-    }
-
-    i:active {
-        transform : scale(0.97);
-        transition: 0.02s ease-in;
-    }
-
-    #select {
-        background-color: $mainColor;
-        cursor          : pointer;
-        border          : none;
-        outline         : none;
-        padding         : 6px;
-        margin-top      : 2px;
-        border-radius   : 5px;
-        box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.55);
-        border-bottom   : 0.5px solid rgba(0, 0, 0, 0.05);
-        border-right    : 0.5px solid rgba(0, 0, 0, 0.05);
-
-    }
-
-    :nth-of-type(2) {
-        display       : flex;
-        flex-direction: row;
-        align-items   : center;
+        border    : none;
+        display   : flex;
+        align-self: center;
+        cursor    : pointer;
+        margin    : 0;
+        outline   : none;
+        height    : 35px;
+        // padding:5px;
+        box-shadow: none;
+        padding   : 0;
 
         i {
-            margin-left: 10px;
+            padding   : 7.5px;
+            display   : flex;
+            align-self: center;
+            width     : auto;
+
+            span {
+                padding-left: 10px;
+                font-weight : 500;
+                font-size   : 18px;
+            }
         }
     }
 
+    i {
+        align-items     : center;
+        background-color: $mainColor;
+        border-left     : 0.1px solid $light;
+        border-top      : 0.1px solid $light;
+        border-bottom   : 0.1px solid $mainColor;
+        border-right    : 0.1px solid $mainColor;
+        border-radius   : 5px;
+        box-shadow      : -3px -3px 9px $light, 3px 3px 9px $shadow;
+        color           : $iconColor;
+        cursor          : pointer;
+        display         : flex;
+        font-size       : 20px;
+        height          : 35px;
+        justify-content : space-around;
+        width           : 35px;
+    }
+
+    i:hover {
+        border          : none;
+        background-color: $hoverColor;
+    }
+
+    #select {
+        background   : $mainColor;
+        border       : none;
+        border-bottom: 0.1px solid $light;
+        border-radius: 5px;
+        border-right : 0.1px solid $light;
+        box-shadow   : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
+        cursor       : pointer;
+        margin-top   : 2px;
+        outline      : none;
+        color        : rgb(100, 100, 100);
+        height       : 35px;
+        padding      : 6px;
+
+    }
+
+    #sortByDiv>label {
+        font-weight: 500;
+    }
+
+    :nth-of-type(2) {
+        align-items   : center;
+        display       : flex;
+        flex-direction: row;
+
+        i {
+            margin-left: 15px;
+        }
+
+    }
+
     select:hover {
-        color  : $iconColor;
+        color  : $buttonColor;
         outline: none;
         border : none;
     }
 
     button {
+        background-color: red;
         visibility      : hidden;
-        background-color: $backgroundColor;
     }
 }
 
 //SIDEBAR
 .sideBar {
     // overflow: scroll;
-    width              : 200px;
-    position           : relative;
-    background         : $backgroundColor;
     // border          : 1px solid red;
-    transition         : 0.3s ease;
-    width              : auto;
+    background: $backgroundColor;
+    position  : relative;
+    top       : 0;
+    transition: 0.3s ease;
+    width     : 200px;
+    width     : auto;
 
     .sideClass {
         // overflow: scroll;
         background: $backgroundColor;
-
-        position: sticky;
-        top     : 109px;
-        padding : 10px 20px;
+        position  : sticky;
+        top       : 110px;
+        padding   : 20px 20px;
 
         // min-height: 750px;
         div {
+
+            background   : $mainColor;
+            border-left  : 0.1px solid $light;
+            border-radius: 5px;
+            border-top   : 0.1px solid $light;
+            border-bottom: 0.1px solid $mainColor;
+            border-right : 0.1px solid $mainColor;
+            box-shadow   : -3px -3px 9px $light, 3px 3px 9px $shadow;
+            margin-bottom: 12px;
+            max-height   : 200px;
+            padding      : 5px 10px;
             position     : relative;
             width        : 190px;
-            padding      : 5px 10px;
-            background   : $mainColor;
-            border-radius: 5px;
-            box-shadow   : -3px -2px 3px $light, 3px 2px 5px $secondShadow;
-            border-top   : 0.5px solid rgba(0, 0, 0, 0.05);
-            border-left  : 0.5px solid rgba(0, 0, 0, 0.05);
-            margin-bottom: 12px;
+            transition: 0.2s;
 
-            // border-bottom: 1px solid rgb(177, 6, 6);
-            button i {
-                display   : flex;
-                align-self: center;
-                color     : $iconColor;
+            label {
+                font-size: 14px;
+            }
+
+            h6 {
+                font-size    : 16px;
+                margin-bottom: 10px;
+                margin-top   : 0;
+                font-weight  : 500;
             }
 
             h6 button {
-                box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
-                border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
-                border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
-                // margin-top:2px;
-                // background: yellow; 
-                float           : right;
-                border          : 3px solid $iconColor;
-                width           : 20px;
-                height          : 20px;
-                transition      : 0.3s ease-in;
-                outline         : none;
-                // border          : none;
+                padding         : 0;
                 border-radius   : 50%;
-                cursor          : pointer;
-                justify-content : center;
-                // align-content: center;
+                border          : 1.5px solid $buttonColor;
+                background-color: $mainColor;
+                box-shadow      : none;
                 display         : flex;
-                // transform : rotate(-9deg);
+                margin-top      : 2px;
+                float           : right;
+                height          : 20px;
+                justify-content : center;
+                transform       : none;
+                transition      : 0.25s ease-in;
+                width           : 20px;
+            }
+
+            button i {
+                display   : flex;
+                align-self: center;
+                color     : $buttonColor;
+                font-size : 16px;
             }
         }
 
-        .minimize {
-            height  : 36px;
-            overflow: hidden;
+        // div:hover {
+        //     // box-shadow: -2px -2px 3px $light, 2px 2px 5px $shadow;
+        //     transition: 0.s;
 
+        // }
+
+        .minimize {
+            max-height: 35px;
+            overflow  : hidden;
+            transition: 0.2s;
         }
 
         .rotateClass {
-            // background-color: red;
-            transition: 0.3s ease-in;
-            transform : rotate(180deg);
-            box-shadow: -3px -2px 3px $shadow, 3px 2px 5px $whiteLight;
+            transform: rotate(-180deg);
         }
 
         div:last-of-type {
-            // background-color: red;
             margin-bottom: 0;
-        }
-
-        div:hover {
-            box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
-            transition: 0.3s;
         }
     }
 
@@ -380,106 +594,76 @@ nav {
 
 
 #flexWrapper {
-    position  : relative;
     display   : flex;
-    width     : auto;
     min-height: 750px;
+    position  : relative;
+    width     : auto;
 }
 
 #displayProducts {
     background-color: $backgroundColor;
     display         : flex;
-    width           : 100%;
     flex-wrap       : wrap;
+    padding-top     : 10px;
+    width           : 100%;
 }
 
 //detalii produs
 
 .productDiv {
-    padding         : 5px 0;
-    text-align      : center;
-    background      : $mainColor;
-    border-radius   : 5px;
-    box-shadow      : -3px -2px 5px $light, 3px 2px 5px $secondShadow;
-    border-top      : 1px solid rgba(0, 0, 0, 0.05);
-    border-left     : 1px solid rgba(0, 0, 0, 0.05);
-    // padding      : 5px;
-    margin          : 10px;
-    width           : 230px;
-    height          : 380px;
-    transition      : 0.3s ease-in-out;
-    transform       : scale(1);
+
+    background   : $mainColor;
+    border-left  : 0.1px solid $light;
+    border-radius: 5px;
+    border-top   : 0.1px solid $light;
+    box-shadow   : -3px -3px 9px $light, 3px 3px 9px $shadow;
+    border-bottom: 0.1px solid $mainColor;
+    border-right : 0.1px solid $mainColor;
+    height       : 380px;
+    margin       : 10px;
+    padding-top  : 8px;
+    position     : relative;
+    text-align   : center;
+    transform    : scale(1);
+    transition   : 0.3s ease-in-out;
+    width        : 230px;
+    padding      : 10px;
 
     img {
-        // box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 5px $shadow;
-        border-radius: 2px;
-        width        : 90%;
+        width: 85%;
     }
 
     div:nth-child(2) {
-        flex-direction     : column;
-        display            : flex;
-        // background-color: red;
-        padding            : 0 5px;
-        height             : 140px;
+        display       : flex;
+        flex-direction: column;
+        height        : 180px;
     }
 
-    button {
-        background-color: $iconColor;
-        color           : $mainColor;
-        cursor          : pointer;
-        outline         : none;
-        border-radius   : 5px;
-        padding         : 8px 10px;
-        // margin-top:5px;
-        border          : none;
-        box-shadow      : -3px -2px 3px $whiteLight, 3px 2px 5px $shadow;
-        border-top      : 0.5px solid rgba(0, 0, 0, 0.1);
-        border-left     : 0.5px solid rgba(0, 0, 0, 0.1);
+    .buyPhone {
+        margin-bottom: 10px;
     }
-
-    button:active {
-        // background-color: lightgray;
-        transform : scale(0.97);
-        transition: 0.02s ease-in;
-    }
-
-    // div:nth-of-type(2){
-    //     height: 60px;
-    //     // background-color: red;
-    // }
-    // .phoneRating {
-    //     // background-color: pink;?
-    //     height  : 30px;
-    //     width   : auto;
-    //     position: relative;
-    // }
-
-    // .phoneDescription {
-    //     background-color: lightblue;
-    //     // padding: 5px 15px;
-    // }
 
     .phonePrice {
-        color: red;
+        color           : $cherryColor;
+        font-weight     : 700;
+        margin-bottom   : 10px;
+        // margin-top   : 10px;
     }
 
-    // .buyPhone button {
-    //     color: red;
-    // }
+    .phoneRating {
+        margin-bottom: 5px;
+    }
 
-    // span {
-    //     display         : inline-block;
-    //     background-color: purple;
-    // }
+    span {
+        // display         : inline-block;
+        color    : rgb(100, 100, 100);
+        font-size: 14px;
+    }
 }
 
 .productDiv:hover {
-    // background-color: red;
-    box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
     transition: 0.2s ease-in;
     transform : scale(1.02);
-    // z-index: 100;
 
 }
 
@@ -491,6 +675,10 @@ nav {
 
     #navDiv {
         width: 990px;
+
+        #searchBox {
+            width: 360px;
+        }
     }
 
     #sortHeader {
@@ -499,11 +687,10 @@ nav {
 }
 
 //tablet
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1010px) {
 
     #bodyContent {
-        width: auto;
-
+        width: 100%;
     }
 
     nav {
@@ -514,6 +701,12 @@ nav {
         width: 100%;
     }
 
+    #poster img {
+        height: 150px;
+        margin: 0;
+        width : 100vw;
+    }
+
     // //middle
     #sortHeader button {
         visibility      : initial;
@@ -521,15 +714,13 @@ nav {
     }
 
     .sideBar {
-        // display         : none;
-        position           : absolute;
-        // top          : 170px;
-        z-index            : 1;
-        height             : 100%;
-        left               : -230px;
-        width              : auto;
-        // background      : $whiteLight;
-        transition         : 0.3s ease;
+
+        height    : 100%;
+        left      : -230px;
+        position  : absolute;
+        transition: 0.3s ease;
+        width     : auto;
+        z-index   : 1;
     }
 
     #flexWrapper {
@@ -537,30 +728,29 @@ nav {
     }
 
     #displayProducts {
+
         display              : grid;
-        grid-template-columns: repeat(auto-fit, minmax(243px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        padding              : 10px 10px;
         transition           : 0.3s ease;
-        padding              : 5px 15px;
     }
 
     .productDiv {
-        img {
-            width: 70%;
-        }
+        height    : auto;
+        width     : auto;
+        box-sizing: border-box;
 
-        height     : auto;
-        width      : auto;
-        box-sizing : border-box;
-        margin     :5px;
+        img {
+            width: 65%;
+        }
     }
 
     .productDiv:hover {
-        box-shadow: -3px -3px 3px $whiteLight, 3px 2px 5px $shadow;
-        transform : none;
+        transform: none;
     }
 
     .displayMargin {
-        margin-left: 210px;
+        margin-left: 215px;
     }
 
     .revealSidebar {
@@ -568,61 +758,104 @@ nav {
     }
 }
 
-#phoneData {
-    padding       : 10px;
-    height        : auto;
-    display       : flex;
-    flex-direction: column;
-    align-content : stretch;
+@media screen and (max-width: 785px) {
+    #navDiv {
+        width: 100%;
+
+        #searchBox {
+            // margin-right: 30px;
+            width      : 100%;
+            margin-left: 10px;
+        }
+    }
+
+    #navDiv>div:nth-child(4)>i {
+        display: none;
+    }
+
+
+    #poster img {
+        height: 120px;
+        margin: 0;
+        width : 100vw;
+    }
+
+    #toggleFilters span {
+        display: none;
+    }
+
+    #sortByDiv>label {
+        display: none;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #flexWrapper {
+        min-width: 470px;
+    }
+
 }
+
+// #phoneData {
+//     align-content : stretch;
+//     display       : flex;
+//     flex-direction: column;
+//     height        : auto;
+//     padding       : 10px;
+// }
 
 //CHECKBOX
 /* The container */
 .container {
     // border:2px solid black;
-    display            : block;
-    position           : relative;
-    padding-left       : 35px;
-    margin-bottom      : 12px;
-    cursor             : pointer;
-    font-size          : 18px;
-    -webkit-user-select: none;
     -moz-user-select   : none;
     -ms-user-select    : none;
+    -webkit-user-select: none;
+    cursor             : pointer;
+    display            : block;
+    font-size          : 18px;
+    margin-bottom      : 12px;
+    padding-left       : 35px;
+    position           : relative;
     user-select        : none;
+    line-height        : 1.3;
+
 }
 
 /* Hide the browser's default checkbox */
 .container input {
-    position: absolute;
-    opacity : 0;
     cursor  : pointer;
     height  : 0;
+    opacity : 0;
+    position: absolute;
     width   : 0;
+
 }
 
 /* Create a custom checkbox */
 .checkmark {
+
+    background-color: $mainColor;
+    border-radius   : 2px;
+    border          : 1.5px solid $buttonColor;
+    height          : 20px;
+    left            : 0;
     position        : absolute;
     top             : 0;
-    left            : 0;
-    height          : 22px;
-    width           : 22px;
-    background-color: rgba(255, 255, 255, 0.959);
-    box-shadow      : inset -3px -2px 2px $whiteLight, inset 3px 3px 7px rgba(0, 0, 0, 0.45);
-
-    border-radius: 2px;
+    width           : 20px;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input~.checkmark {
-    background-color: #ccc;
+    background-color: $backgroundColor;
 }
 
 /* When the checkbox is checked, add a blue background */
-// .container input:checked~.checkmark {
-//     // background-color: lightgray;
-// }
+.container input:checked~.checkmark {
+    background-color: $buttonColor;
+}
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -638,15 +871,17 @@ nav {
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-    left             : 7px;
-    top              : 3px;
-    width            : 5px;
-    height           : 10px;
-    border           : 1px solid $iconColor;
-    border-width     : 0px 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform    : rotate(45deg);
-    transform        : rotate(45deg);
+    -ms-transform       : rotate(45deg);
+    -webkit-transform   : rotate(45deg);
+    border              : 1px solid $mainColor;
+    // border-radius    : 2px;
+    border-width        : 0px 2px 2px 0;
+    height              : 10px;
+    left                : 4.5px;
+    top                 : 1.5px;
+    transform           : rotate(45deg);
+    width               : 5px;
+    // background-color: $iconColor;
 }
 
 .starsOuter {
@@ -655,24 +890,24 @@ nav {
 }
 
 .starsOuter::before {
+    color      : #ccc;
     content    : "\f005 \f005 \f005 \f005 \f005";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color      : #ccc;
 }
 
 .starsInner {
+    left       : 0;
+    overflow   : hidden;
     position   : absolute;
     top        : 0;
-    left       : 0;
     white-space: nowrap;
-    overflow   : hidden;
     // width:70%;
 }
 
 .starsInner::before {
+    color      : #f8ce0b;
     content    : "\f005 \f005 \f005 \f005 \f005";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color      : #f8ce0b;
 }
