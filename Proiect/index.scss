@@ -1,14 +1,11 @@
-$mainColor                            :rgb(240, 245, 245);
-$hoverColor                           : rgb(211, 211, 211);
-$buttonColor                          : #3d537a;
-// $iconColor                         : #3d537a;
-$iconColor                            : #5469a1;
-$cherryColor                          : #DD1048;
-$backgroundColor                      : rgb(233, 240, 240);
-// $backgroundColor                : white;
-// $backgroundColor       : #d4d4d4;    
-$shadow                               :rgb(148, 148, 148);
-$light                                : rgb(255, 255, 255);
+$mainColor       :#f0f5f5;
+$backgroundColor :rgb(230, 240, 240);
+$buttonColor     :#3d537a;
+$iconColor       :#5469a1;
+$cherryColor     :#DD1048;
+$hoverColor      :rgb(211, 211, 211);
+$light           :rgb(255, 255, 255);
+$shadow          :rgb(141, 141, 141);
 
 * {
     color         : #4b4b4b;
@@ -23,28 +20,68 @@ $light                                : rgb(255, 255, 255);
 body {
     background     : $backgroundColor;
     display        : flex;
+    flex-direction : column;
     justify-content: center;
     margin         : 0;
     padding        : 0;
     position       : relative;
     overflow-x     : hidden;
-    // overflow-y:auto ;
+    align-items    : center;
+}
+
+footer {
+    border-top      : 1px solid $hoverColor;
+    margin          : 0 20px;
+    padding         : 10px;
+    padding-bottom  : 100px;
+    height          : auto;
+    width           : 100%;
+    display         : flex;
+    background-color: rgb(220, 230, 230);
+    flex-direction  : row;
+    justify-content : space-around;
+    font-size       : 12px;
+    line-height: 2;
+
+    div {
+        padding: 10px;
+    }
+
+    h2 {
+        color        : $iconColor;
+        margin-bottom: 10px
+    }
+
+    a {
+        text-decoration: none;
+        color          : $buttonColor
+    }
+
+    a:hover {
+        color: gray;
+    }
+
+
+
+}
+
+#bodyDiv {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
 }
 
 button {
-    background-color   : $buttonColor;
-    border             : none;
-    // border-left     : 0.1px solid $light;
-    border-radius      : 5px;
-    // border-top      : 0.1px solid $light;
-    box-shadow         : -3px -3px 9px $light, 3px 3px 9px $shadow;
-    color              : $backgroundColor;
-    cursor             : pointer;
-    font-weight        : 600;
-    outline            : none;
-    padding            : 8px 10px;
-    position           : relative;
-    // color:black
+    background-color: $buttonColor;
+    border          : none;
+    border-radius   : 5px;
+    box-shadow      : -3px 1px 7px $light, 3px 3px 7px $shadow;
+    color           : $backgroundColor;
+    cursor          : pointer;
+    font-weight     : 600;
+    outline         : none;
+    padding         : 8px 10px;
+    position        : relative;
 }
 
 button:active {
@@ -57,15 +94,14 @@ button:hover {
 }
 
 nav {
-    background-color   : $backgroundColor;
-    display            : flex;
-    justify-content    : center;
-    left               : 0;
-    position           : sticky;
-    top                : 0;
-    // transition      : 0.5s;
-    width              : 100%;
-    z-index            : 3;
+    background-color: $backgroundColor;
+    display         : flex;
+    justify-content : center;
+    left            : 0;
+    position        : sticky;
+    top             : 0;
+    width           : 100%;
+    z-index         : 3;
 }
 
 #navDiv {
@@ -81,43 +117,39 @@ nav {
     #logo {
         margin-right: 20px;
         margin-left : 40px;
-        margin-top   : 25px;
+        margin-top  : 25px;
     }
 
     i {
-        // margin-right: 12px;
+
         align-items     : center;
         background-color: $mainColor;
         border-left     : 0.1px solid $light;
         border-radius   : 5px;
-        border-top      : 0.1px solid $light;
-        border-bottom   : 0.1px solid $mainColor;
         border-right    : 0.1px solid $mainColor;
-
-        box-shadow     : -3px -3px 9px $light, 3px 3px 9px $shadow;
-        color          : $iconColor;
-        cursor         : pointer;
-        display        : flex;
-        font-size      : 20px;
-        height         : 35px;
-        justify-content: center;
-        margin-left    : 15px;
-        width          : 35px;
+        box-shadow      : -5px 1px 9px $light, 5px 2px 9px $shadow;
+        color           : $iconColor;
+        cursor          : pointer;
+        display         : flex;
+        font-size       : 20px;
+        height          : 35px;
+        justify-content : center;
+        margin-left     : 15px;
+        width           : 35px;
     }
 
     i:hover {
         border          : none;
         background-color: $hoverColor;
-        // transition: 0.3s;
     }
 
     #mainMenu {
-        margin       : 0;
-        display      : flex;
-        align-content: center;
-        padding-right: 10px;
+        margin        : 0;
+        display       : flex;
+        align-content : center;
+        padding-right : 10px;
         padding-bottom: 10px;
-        padding-top: 10px;
+        padding-top   : 10px;
 
         i {
             margin-left: 0;
@@ -129,27 +161,24 @@ nav {
         align-items    : center;
         display        : flex;
         justify-content: center;
-        width          : 570px;
+        width          : 605px;
         position       : relative;
         margin-left    : auto;
         margin-right   : auto;
 
-
         #search {
-            background-color   : $mainColor;
-            border             : none;
-            border-bottom      : 0.1px solid $light;
-            border-right       : 0.1px solid $light;
-            border-radius      : 5px;
-            box-shadow         : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
-            height             : 35px;
-            outline            : none;
-            padding-left       : 10px;
-            width              : 100%;
-            // background-color: red;
+            background-color: $mainColor;
+            border          : none;
+            border-bottom   : 0.1px solid $light;
+            border-right    : 0.1px solid $light;
+            border-radius   : 5px;
+            box-shadow      : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
+            height          : 35px;
+            outline         : none;
+            padding-left    : 10px;
+            width           : 100%;
         }
 
-        // input type
         i {
             box-shadow      : none;
             background-color: transparent;
@@ -163,17 +192,16 @@ nav {
 
     //dropdown menu
     .dropdown {
-        box-shadow : none;
-        cursor     : pointer;
-        display    : flex;
-        display    : inline-block;
-        // height  : 50px;
-        position   : relative;
+        box-shadow: none;
+        cursor    : pointer;
+        display   : flex;
+        display   : inline-block;
+        position  : relative;
     }
 
     .dropdown-content {
         background-color: $mainColor;
-        border-radius: 5px;
+        border-radius   : 5px;
         box-shadow      : 2px 2px 10px $shadow;
 
         display  : none;
@@ -199,7 +227,6 @@ nav {
     }
 
     .dropbtn {
-        // background-color: red;
         align-content  : center;
         display        : flex;
         justify-content: flex-start;
@@ -236,17 +263,16 @@ nav {
     .cart {
         background-color: $mainColor;
         box-shadow      : 2px 2px 10px $shadow;
-        border-radius             : 5px;
-        display                   : flex;
-        flex-direction            : column;
-        align-items               : flex-end;
-        overflow-y                : scroll;
-        padding                   : 15px;
-        // padding-top            : 40px;
-        max-height                : 600px;
-        width                     : auto;
-        position                  : relative;
-        overflow-y                : auto;
+        border-radius   : 5px;
+        display         : flex;
+        flex-direction  : column;
+        align-items     : flex-end;
+        overflow-y      : scroll;
+        padding         : 15px;
+        max-height      : 600px;
+        width           : auto;
+        position        : relative;
+        overflow-y      : auto;
 
         i span {
             background-color: $cherryColor;
@@ -261,16 +287,16 @@ nav {
         }
 
         button.closeBtn {
-            color              : $buttonColor;
-            background-color   : $mainColor;
-            font-size          : 15px;
-            height             : 24px;
-            width              : 24px;
-            display            : flex;
-            align-items        : center;
-            justify-content    : center;
-            box-shadow: none;
-            margin-right       : 10px;
+            color           : $buttonColor;
+            background-color: $mainColor;
+            font-size       : 15px;
+            height          : 24px;
+            width           : 24px;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            box-shadow      : none;
+            margin-right    : 10px;
         }
 
         button.closeBtn:after {
@@ -281,20 +307,75 @@ nav {
     }
 }
 
+.productDivInfo {
+    margin-top   : 10px;
+    box-shadow   : -3px 1px 9px $light, 4px 3px 12px $shadow;
+    border-radius: 10px;
+
+    position      : relative;
+    background    : $mainColor;
+    display       : flex;
+    flex-direction: row;
+    height        : 420px;
+    width         : 770px;
+    padding       : 10px;
+    margin-bottom : 10px;
+    position      : relative;
+
+    img {
+        margin-top   : auto;
+        margin-bottom: auto;
+        margin-left  : 0;
+        width        : 90%
+    }
+
+
+    div:nth-child(2)>div:nth-child(5)>p {
+        // display: none;
+        height   : 200px;
+        font-size: 14px;
+        color    : rgb(100, 100, 100);
+    }
+
+    div:nth-of-type(2) {
+        // background-color: yellow;
+        display       : flex;
+        flex-direction: column;
+        min-width     : 250px;
+        margin-top    : 15px;
+
+        div.phoneDescription {
+            height: 70px;
+        }
+
+        .phonePrice {
+            color        : $cherryColor;
+            font-size    : 20px;
+            margin-bottom: 20px;
+            width        : 100px;
+        }
+
+        button {
+            box-shadow: none;
+            position  : absolute;
+            right     : 20px;
+            bottom    : 14px;
+        }
+    }
+}
+
 .productDivCart {
-    scroll-snap-align       : start;
-    position                : relative;
-    background              : transparent;
-    border-bottom           : 0.1px solid $hoverColor;
-    display                 : flex;
-    flex-direction          : row;
-    height                  : 150px;
-    justify-content         : space-between;
-    // margin               : 10px;
-    padding                 : 10px;
-    margin-bottom           : 10px;
-    position                : relative;
-    width                   : 460px;
+    position       : relative;
+    background     : transparent;
+    border-bottom  : 0.1px solid $hoverColor;
+    display        : flex;
+    flex-direction : row;
+    height         : 150px;
+    justify-content: space-between;
+    padding        : 10px;
+    margin-bottom  : 10px;
+    position       : relative;
+    width          : 460px;
 
     img {
         margin-left: 0;
@@ -302,7 +383,7 @@ nav {
     }
 
     div:nth-of-type(2) {
-        // background-color: yellow;
+
         width         : 310px;
         display       : flex;
         flex-direction: column;
@@ -323,7 +404,7 @@ nav {
             outline         : none;
             padding-left    : 5px;
             padding-right   : 2px;
-            width           : 40px;
+            width           : 42px;
         }
 
         input::-webkit-outer-spin-button,
@@ -345,18 +426,17 @@ nav {
 
     button {
         background-color: transparent;
-        border-radius: 0;
-        // border-bottom:1px solid $hoverColor;
-        box-shadow:none;
-        color:$buttonColor;
-        padding            : 2px 10px;
-        width              : auto;
-        // background-color: red;
-        position           : absolute;
-        right              : 0;
-        bottom             : 14px;
+        border-radius   : 0;
+        box-shadow      : none;
+        color           : $buttonColor;
+        padding         : 2px 10px;
+        width           : auto;
+        position        : absolute;
+        right           : 0;
+        bottom          : 14px;
     }
-    button:hover{
+
+    button:hover {
         color: gray;
     }
 }
@@ -370,19 +450,18 @@ nav {
 #poster img {
     height: 200px;
     margin: 0;
-    width : 1500px;
+    width : 100vw;
 }
 
 // //middle
 #bodyContent {
-    box-sizing        : border-box;
-    display           : flex;
-    flex-direction    : column;
-    justify-content   : center;
-    margin-left       : auto;
-    margin-right      : auto;
-    // margin-top     : 5px;
-    width             : 1240px;
+    box-sizing     : border-box;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 1240px;
 }
 
 // hEADER
@@ -400,41 +479,14 @@ nav {
     width          : auto;
     z-index        : 2;
 
-    #toggleFilters {
-        border    : none;
-        display   : flex;
-        align-self: center;
-        cursor    : pointer;
-        margin    : 0;
-        outline   : none;
-        height    : 35px;
-        // padding:5px;
-        box-shadow: none;
-        padding   : 0;
-
-        i {
-            padding   : 7.5px;
-            display   : flex;
-            align-self: center;
-            width     : auto;
-
-            span {
-                padding-left: 10px;
-                font-weight : 500;
-                font-size   : 18px;
-            }
-        }
-    }
-
     i {
+
         align-items     : center;
         background-color: $mainColor;
         border-left     : 0.1px solid $light;
-        border-top      : 0.1px solid $light;
-        border-bottom   : 0.1px solid $mainColor;
         border-right    : 0.1px solid $mainColor;
         border-radius   : 5px;
-        box-shadow      : -3px -3px 9px $light, 3px 3px 9px $shadow;
+        box-shadow      : -5px 1px 9px $light, 5px 2px 9px $shadow;
         color           : $iconColor;
         cursor          : pointer;
         display         : flex;
@@ -444,40 +496,55 @@ nav {
         width           : 35px;
     }
 
+    #toggleFilters {
+        i {
+            padding     : 7.5px;
+            width       : auto;
+            margin-right: 20px;
+
+            span {
+                padding-left: 10px;
+                font-weight : 500;
+                font-size   : 18px;
+            }
+        }
+    }
+
+    #showResults {
+
+        margin-top   : auto;
+        margin-bottom: 8px;
+        font-size    : 12px;
+        margin-right : auto;
+        height       : auto;
+    }
+
     i:hover {
-        border          : none;
+        border-left          : 1px solid $hoverColor;
+        border-right          : 1px solid $hoverColor;
         background-color: $hoverColor;
     }
 
     #select {
+
         background   : $mainColor;
         border       : none;
         border-bottom: 0.1px solid $light;
         border-radius: 5px;
         border-right : 0.1px solid $light;
         box-shadow   : inset -2px -2px 6px $light, inset 2px 2px 6px $shadow;
-        cursor       : pointer;
-        margin-top   : 2px;
-        outline      : none;
         color        : rgb(100, 100, 100);
+        cursor       : pointer;
         height       : 35px;
+        margin-top   : 2px;
+        margin-right : 15px;
+        outline      : none;
         padding      : 6px;
 
     }
 
-    #sortByDiv>label {
+    #sortByDiv label {
         font-weight: 500;
-    }
-
-    :nth-of-type(2) {
-        align-items   : center;
-        display       : flex;
-        flex-direction: row;
-
-        i {
-            margin-left: 15px;
-        }
-
     }
 
     select:hover {
@@ -486,16 +553,10 @@ nav {
         border : none;
     }
 
-    button {
-        background-color: red;
-        visibility      : hidden;
-    }
 }
 
 //SIDEBAR
 .sideBar {
-    // overflow: scroll;
-    // border          : 1px solid red;
     background: $backgroundColor;
     position  : relative;
     top       : 0;
@@ -504,31 +565,28 @@ nav {
     width     : auto;
 
     .sideClass {
-        // overflow: scroll;
+
         background: $backgroundColor;
         position  : sticky;
         top       : 110px;
         padding   : 20px 20px;
 
-        // min-height: 750px;
         div {
 
             background   : $mainColor;
             border-left  : 0.1px solid $light;
-            border-radius: 5px;
-            border-top   : 0.1px solid $light;
-            border-bottom: 0.1px solid $mainColor;
+            border-radius: 8px;
             border-right : 0.1px solid $mainColor;
-            box-shadow   : -3px -3px 9px $light, 3px 3px 9px $shadow;
-            margin-bottom: 12px;
+            box-shadow   : -3px 1px 9px $light, 4px 3px 12px $shadow;
+            margin-bottom: 15px;
             max-height   : 200px;
             padding      : 5px 10px;
             position     : relative;
+            transition   : 0.2s;
             width        : 190px;
-            transition: 0.2s;
 
             label {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             h6 {
@@ -539,6 +597,7 @@ nav {
             }
 
             h6 button {
+
                 padding         : 0;
                 border-radius   : 50%;
                 border          : 1.5px solid $buttonColor;
@@ -561,12 +620,6 @@ nav {
                 font-size : 16px;
             }
         }
-
-        // div:hover {
-        //     // box-shadow: -2px -2px 3px $light, 2px 2px 5px $shadow;
-        //     transition: 0.s;
-
-        // }
 
         .minimize {
             max-height: 35px;
@@ -614,9 +667,9 @@ nav {
 
     background   : $mainColor;
     border-left  : 0.1px solid $light;
-    border-radius: 5px;
-    border-top   : 0.1px solid $light;
-    box-shadow   : -3px -3px 9px $light, 3px 3px 9px $shadow;
+    border-radius: 8px;
+    border-top   : 0.1px solid $mainColor;
+    box-shadow   : -3px 1px 9px $light, 4px 3px 12px $shadow;
     border-bottom: 0.1px solid $mainColor;
     border-right : 0.1px solid $mainColor;
     height       : 380px;
@@ -629,8 +682,13 @@ nav {
     width        : 230px;
     padding      : 10px;
 
+    div:nth-child(2)>div:nth-child(5)>p {
+        display: none;
+    }
+
     img {
-        width: 85%;
+        cursor: pointer;
+        width : 85%;
     }
 
     div:nth-child(2) {
@@ -644,10 +702,9 @@ nav {
     }
 
     .phonePrice {
-        color           : $cherryColor;
-        font-weight     : 700;
-        margin-bottom   : 10px;
-        // margin-top   : 10px;
+        color        : $cherryColor;
+        font-weight  : 700;
+        margin-bottom: 10px;
     }
 
     .phoneRating {
@@ -655,7 +712,6 @@ nav {
     }
 
     span {
-        // display         : inline-block;
         color    : rgb(100, 100, 100);
         font-size: 14px;
     }
@@ -694,7 +750,7 @@ nav {
     }
 
     nav {
-        width: auto;
+        width: 100%;
     }
 
     #navDiv {
@@ -708,13 +764,17 @@ nav {
     }
 
     // //middle
-    #sortHeader button {
-        visibility      : initial;
-        background-color: $backgroundColor;
+
+    #toggleFilters span {
+        display: none;
+    }
+
+    #showResults {
+        margin-bottom: 5px;
+        width        : 90px;
     }
 
     .sideBar {
-
         height    : 100%;
         left      : -230px;
         position  : absolute;
@@ -728,7 +788,6 @@ nav {
     }
 
     #displayProducts {
-
         display              : grid;
         grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
         padding              : 10px 10px;
@@ -759,11 +818,14 @@ nav {
 }
 
 @media screen and (max-width: 785px) {
+    nav {
+        min-width: 500px;
+    }
+
     #navDiv {
         width: 100%;
 
         #searchBox {
-            // margin-right: 30px;
             width      : 100%;
             margin-left: 10px;
         }
@@ -773,15 +835,15 @@ nav {
         display: none;
     }
 
-
     #poster img {
         height: 120px;
         margin: 0;
-        width : 100vw;
+        width : 100%;
     }
 
-    #toggleFilters span {
-        display: none;
+    .productDivInfo {
+        width : 500px;
+        height: 300px;
     }
 
     #sortByDiv>label {
@@ -795,21 +857,11 @@ nav {
     #flexWrapper {
         min-width: 470px;
     }
-
 }
 
-// #phoneData {
-//     align-content : stretch;
-//     display       : flex;
-//     flex-direction: column;
-//     height        : auto;
-//     padding       : 10px;
-// }
-
 //CHECKBOX
-/* The container */
+// The container 
 .container {
-    // border:2px solid black;
     -moz-user-select   : none;
     -ms-user-select    : none;
     -webkit-user-select: none;
@@ -821,20 +873,18 @@ nav {
     position           : relative;
     user-select        : none;
     line-height        : 1.3;
-
 }
 
-/* Hide the browser's default checkbox */
+//hide checkbox
 .container input {
     cursor  : pointer;
     height  : 0;
     opacity : 0;
     position: absolute;
     width   : 0;
-
 }
 
-/* Create a custom checkbox */
+//custom checkbox 
 .checkmark {
 
     background-color: $mainColor;
@@ -847,43 +897,40 @@ nav {
     width           : 20px;
 }
 
-/* On mouse-over, add a grey background color */
 .container:hover input~.checkmark {
-    background-color: $backgroundColor;
+    background-color: $hoverColor;
 }
 
-/* When the checkbox is checked, add a blue background */
+//when checked add background 
 .container input:checked~.checkmark {
     background-color: $buttonColor;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
+//checkmark / indicator (hidden when not checked) 
 .checkmark:after {
     content : "";
     position: absolute;
     display : none;
 }
 
-/* Show the checkmark when checked */
+// Show the checkmark when checked 
 .container input:checked~.checkmark:after {
     display: block;
 }
 
-/* Style the checkmark/indicator */
+// Style the checkmark/indicator
 .container .checkmark:after {
     -ms-transform       : rotate(45deg);
     -webkit-transform   : rotate(45deg);
     border              : 1px solid $mainColor;
-    // border-radius    : 2px;
     border-width        : 0px 2px 2px 0;
     height              : 10px;
     left                : 4.5px;
     top                 : 1.5px;
     transform           : rotate(45deg);
     width               : 5px;
-    // background-color: $iconColor;
 }
-
+//Stars
 .starsOuter {
     position: relative;
     display : inline-block;
@@ -902,7 +949,6 @@ nav {
     position   : absolute;
     top        : 0;
     white-space: nowrap;
-    // width:70%;
 }
 
 .starsInner::before {

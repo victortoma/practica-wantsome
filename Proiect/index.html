@@ -7,6 +7,7 @@
     <title>Project</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" </head>
+</head>
 
 <body>
     <div id="bodyDiv">
@@ -15,10 +16,10 @@
                 <div id="mainMenu" class="dropdown">
                     <i class="fas fa-bars"></i>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                        <a href="#">Link 4</a>
+                        <a href="index.html">Go to Main Page</a>
+                        <a href="#">Return to Phones Section</a>
+                        <a href="index.html">Buy some Phones</a>
+                        <a href="https://www.google.com/" target="_blank">Go to Google</a>
                     </div>
                 </div>
 
@@ -38,7 +39,7 @@
 
                 <div id="shoppingCart">
                     <i class="fas fa-shopping-cart"></i>
-                    <div id="wrapperCart" class="hideCart" >
+                    <div id="wrapperCart" class="hideCart">
                         <div class="cart">
                             There Are No Products In Your Cart
                         </div>
@@ -57,26 +58,27 @@
 
             <div id="sortHeader">
 
+
                 <div id="hideBtn">
-                    <button id="toggleFilters"><i class="fas fa-sliders-h"><span>Filter</span></i></button>
+                    <div id="toggleFilters"><i class="fas fa-sliders-h"><span>Filter</span></i></div>
+                </div>
+                <div id="showResults">
+
+                </div>
+                <!-- <div> -->
+                <div id="sortByDiv">
+                    <label for="sortBy">Sort by:</label>
+                    <select name="sortBy" id="select">
+                        <option value="relevance">Relevance</option>
+                        <option value="priceAscending">Price Ascending</option>
+                        <option value="priceDescending">Price Descending</option>
+                        <option value="rating">Rating</option>
+                    </select>
+
                 </div>
 
-                <div>
-                    <div id="sortByDiv">
-                        <label for="sortBy">Sort by:</label>
-                        <select name="sortBy" id="select">
-                            <option value="relevance">Relevance</option>
-                            <option value="priceAscending">Price Ascending</option>
-                            <option value="priceDescending">Price Descending</option>
-                            <option value="reviewNumber">Review</option>
-                        </select>
-
-                    </div>
-
-                    <div id="viewType">
-                        <!-- <i class="fas fa-align-justify"></i> -->
-                        <i class="fas fa-th-large"></i>
-                    </div>
+                <div id="viewType">
+                    <i class="fas fa-th-large"></i>
                 </div>
             </div>
 
@@ -134,7 +136,7 @@
                                 Storage
                                 <button class="rotateClass"><i class="fas fa-caret-down "></i></button>
                             </h6>
-                            <!-- NAME DE SCHIMBAT? -->
+
                             <label class="container">256GB
                                 <input type="checkbox" id="memory256" name="memory" value="256">
                                 <span class="checkmark"></span>
@@ -187,11 +189,37 @@
                 </div>
             </div>
         </div>
-
-        <footer>
-            footer
-        </footer>
+    </div>
+    <br>
+    <footer>
+        <div>
+            <h2>Servicii pentru clienti</h2>
+            <a href="#">Deschiderea coletului la livrare</a><br>
+            <a href="#">30 de zile drept de retur</a><br>
+            <a href="#">Plata cu cardul in rate fara dobanda</a><br>
+            <a href="#">Finantare in rate prin eCREDIT</a><br>
+        </div>
+        <div>
+            <h2>Comenzi si Livrare</h2>
+            <a href="#">Contul meu la eMAG</a><br>
+            <a href="#">Cum comand online</a><br>
+            <a href="#">Livrarea comenzilor</a><br>
+            <a href="#">Modalitati de finantare si plata</a><br>
+        </div>
+        <div>
+            <h2>Suport Clienti</h2>
+            <a href="#">Formular reparatie produs</a><br>
+            <a href="#">Formular returnare produs</a><br>
+            <a href="#">Contact</a><br>
+            <a href="#">ANPC - SAL</a><br>
+        </div>
+        <div>
+            <h2>eTAG.ro</h2>
+            <a href="#">Vreau sa vand pe eTAG</a><br>
+            <a href="#">Termeni si conditii</a><br>
+            <a href="#">Prelucrarea datelor cu caracter personal</a><br>
+            <a href="#">Politica de utilizare Cookie-uri</a>
+        </div>
+    </footer>
 </body>
 <script src="./index.js"></script>
-
-</html>
