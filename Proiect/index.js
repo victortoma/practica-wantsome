@@ -1,5 +1,5 @@
 const jsonArray = [
-   
+
     {
         photo: "./images/Huawei P40 Pro Dual SIM 256GB 8GB RAM Silver Frost.jpg",
         rating: 3.6,
@@ -30,7 +30,7 @@ const jsonArray = [
         price: 899,
         quantity: 1
     },
- 
+
     {
         photo: "./images/Samsung Galaxy Z Flip Dual SIM 256GB 8GB RAM Mirror Purple.jpg",
         rating: 4.5,
@@ -70,7 +70,7 @@ const jsonArray = [
         memory: "32",
         price: 499,
         quantity: 1
-    },  
+    },
     {
         photo: "./images/Apple iPhone 11 64GB Yellow.jpg",
         rating: 4.2,
@@ -152,7 +152,7 @@ const jsonArray = [
         price: 599,
         quantity: 1
     },
-   
+
     {
         photo: "./images/Huawei Nova 5T Dual SIM 128GB 6GB RAM Black.jpg",
         rating: 2.8,
@@ -296,7 +296,7 @@ const jsonArray = [
         price: 840,
         quantity: 1
     },
-  
+
     {
         photo: "./images/Samsung Galaxy S10 Dual SIM 256GB 8GB RAM Green.jpg",
         rating: 3.5,
@@ -428,6 +428,9 @@ const populateDataInDom = (array) => {
 
             productDiv.classList.remove("productDiv")
             productDiv.classList.add("productDivInfo")
+
+            const productDivInfo = document.querySelector(".productDivInfo")
+            productDivInfo.appendChild(buttonFn(returnFn, "Continue Shopping"))
             bodyContent.style.display = "none";
             bodyDiv.appendChild(productDiv)
         })
@@ -439,9 +442,13 @@ const populateDataInDom = (array) => {
 //FN de Intoarecere la pagina principala
 const returnFn = () => {
 
-    productDivInfo = document.querySelector(".productDivInfo")
-    bodyDiv.removeChild(productDivInfo);// stergem productDivInfo
-    return bodyContent.style.display = "initial"
+    let lastChild = bodyDiv.lastElementChild
+    if (lastChild.classList.contains("productDivInfo")) {// verificam daca produsul este in bodyDiv
+        productDivInfo = document.querySelector(".productDivInfo")
+        bodyDiv.removeChild(productDivInfo);// stergem productDivInfo
+        return bodyContent.style.display = "initial"
+    }
+    return;
 }
 
 const linkBack = document.querySelector("#mainMenu > div > a:nth-child(2)")
@@ -466,6 +473,7 @@ const addToCart = (item) => {
     return populateDataInCart(cartArray)
 }
 
+
 // FN de intoarcere la filtrele initiale si pentru debifarea casutelor
 const removeAllCheck = () => allCheckboxes.forEach(checkbox => {
     checkbox.checked = false;
@@ -481,15 +489,24 @@ const removeAllCheck = () => allCheckboxes.forEach(checkbox => {
     }
 })
 
+
 // SEARCH
 //fn de afisarea a numarului de rezultate
 const showResultsFn = () => {
     const showResults = document.querySelector("#showResults")
-    return showResults.innerHTML = `Search Results: ${populatingDomArray.length} phones`
+    resetSpan = document.createElement('span')
+    resetSpan.innerHTML = "Reset Filters"
+    resetSpan.addEventListener("click", () => {
+        return searchFunction('')
+    })
+
+    showResults.innerHTML = `Search Results: ${populatingDomArray.length} phones<br>`
+    showResults.appendChild(resetSpan)
 }
 
 //functia de cautare a produselor
 const searchFunction = searchText => {
+
     const regex = new RegExp(`^${searchText}`, 'gi');
 
     let populatingDomArray = jsonArray.filter((item) =>
@@ -504,6 +521,7 @@ const searchFunction = searchText => {
     }
     populateDataInDom(populatingDomArray)//prima apelare a PopulateData
     rememberDomArray = [...populatingDomArray];//array pentru a reda ultima cautare pentru filtrari
+    window.scrollTo(0, 0)
     return rememberDomArray;
 }
 searchFunction("");//apelarea fn de populare
@@ -517,6 +535,12 @@ searchInput.addEventListener("keyup", () => {// Search ENTER
     return false;
 })
 
+
+// const resetFn =  function() {
+//     // return console.log("dasdsad") 
+//     // removeAllCheck()
+//     // return populateDataInDom(jsonArray)
+// }
 // fn pentru optiunile select 
 const sortByFn = () => {
 
@@ -550,6 +574,7 @@ selectInput.addEventListener("change", sortByFn);
 
 //FILTER
 // FILTRARI CHECKBOXES
+
 //fn pentru rating
 const checkRatingFn = () => {
     let checkboxArray = [];
@@ -621,7 +646,7 @@ const filtersFn = (obj) => {//filtrare obiecte DOM
             else { return obj.price - 200 < product.price && product.price < obj.price; }
         })
         .filter(product => product.rating >= obj.rating)
-
+    window.scrollTo(0, 205)
     return results
 }
 

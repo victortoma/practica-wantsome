@@ -41,10 +41,11 @@ footer {
     flex-direction  : row;
     justify-content : space-around;
     font-size       : 12px;
-    line-height: 2;
+    flex-wrap       : wrap;
 
     div {
-        padding: 10px;
+        padding  : 10px;
+        min-width: 160px;
     }
 
     h2 {
@@ -53,6 +54,8 @@ footer {
     }
 
     a {
+
+        line-height    : 2;
         text-decoration: none;
         color          : $buttonColor
     }
@@ -117,7 +120,7 @@ nav {
     #logo {
         margin-right: 20px;
         margin-left : 40px;
-        margin-top  : 25px;
+        margin-top  : 24px;
     }
 
     i {
@@ -322,6 +325,21 @@ nav {
     margin-bottom : 10px;
     position      : relative;
 
+    button {
+        background-color: transparent;
+        box-shadow      : none;
+        border-bottom   : 1px solid $hoverColor;
+        border-radius   : 0;
+        color           : #4b4b4b;
+        padding         : 3px;
+        margin-top      : 10px;
+        margin-right    : 20px;
+    }
+
+    button:hover {
+        color: $iconColor;
+    }
+
     img {
         margin-top   : auto;
         margin-bottom: auto;
@@ -356,12 +374,22 @@ nav {
         }
 
         button {
-            box-shadow: none;
-            position  : absolute;
-            right     : 20px;
-            bottom    : 14px;
+            background-color: $buttonColor;
+            box-shadow      : none;
+            position        : absolute;
+            right           : 10px;
+            bottom          : 15px;
+            border          : none;
+            // border-bottom: 0.5px solid $hoverColor;
+            border-radius   : 5px;
+            color           : $mainColor;
+            padding         : 8px;
+        }
+        button:hover{
+            background-color:$iconColor;
         }
     }
+
 }
 
 .productDivCart {
@@ -505,7 +533,7 @@ nav {
             span {
                 padding-left: 10px;
                 font-weight : 500;
-                font-size   : 18px;
+                font-size   : 16px;
             }
         }
     }
@@ -513,15 +541,28 @@ nav {
     #showResults {
 
         margin-top   : auto;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
         font-size    : 12px;
         margin-right : auto;
         height       : auto;
+
+        span {
+            font-size      : 14px;
+            color          : $cherryColor;
+            text-decoration: underline;
+            cursor         : pointer;
+            padding-bottom : 5px;
+            padding-right  : 10px;
+        }
+
+        span:hover {
+            color: $iconColor;
+        }
     }
 
     i:hover {
-        border-left          : 1px solid $hoverColor;
-        border-right          : 1px solid $hoverColor;
+        border-left     : 1px solid $hoverColor;
+        border-right    : 1px solid $hoverColor;
         background-color: $hoverColor;
     }
 
@@ -769,10 +810,9 @@ nav {
         display: none;
     }
 
-    #showResults {
-        margin-bottom: 5px;
-        width        : 90px;
-    }
+    // #showResults {
+    //     // margin-bottom: 5px;
+    // }
 
     .sideBar {
         height    : 100%;
@@ -920,16 +960,17 @@ nav {
 
 // Style the checkmark/indicator
 .container .checkmark:after {
-    -ms-transform       : rotate(45deg);
-    -webkit-transform   : rotate(45deg);
-    border              : 1px solid $mainColor;
-    border-width        : 0px 2px 2px 0;
-    height              : 10px;
-    left                : 4.5px;
-    top                 : 1.5px;
-    transform           : rotate(45deg);
-    width               : 5px;
+    -ms-transform    : rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border           : 1px solid $mainColor;
+    border-width     : 0px 2px 2px 0;
+    height           : 10px;
+    left             : 4.5px;
+    top              : 1.5px;
+    transform        : rotate(45deg);
+    width            : 5px;
 }
+
 //Stars
 .starsOuter {
     position: relative;
