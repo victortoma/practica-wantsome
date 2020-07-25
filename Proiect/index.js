@@ -422,15 +422,13 @@ const populateDataInDom = (array) => {
         infoDiv.appendChild(priceFn(product));
         infoDiv.appendChild(buttonFn(addToCart, "ADD TO CART"));
         productDiv.lastElementChild.appendChild(fillFn())// date pentru INFO
+        // productDiv.appendChild(buttonFn(returnFn, "Continue Shopping")).style.display = "none";
 
         populatingDomArray.push(product);
         imgDiv.addEventListener("click", () => {// Fn INFO PRODUS
 
             productDiv.classList.remove("productDiv")
             productDiv.classList.add("productDivInfo")
-
-            const productDivInfo = document.querySelector(".productDivInfo")
-            productDivInfo.appendChild(buttonFn(returnFn, "Continue Shopping"))
             bodyContent.style.display = "none";
             bodyDiv.appendChild(productDiv)
         })
@@ -501,7 +499,7 @@ const showResultsFn = () => {
     })
 
     showResults.innerHTML = `Search Results: ${populatingDomArray.length} phones<br>`
-    showResults.appendChild(resetSpan)
+    return showResults.appendChild(resetSpan)
 }
 
 //functia de cautare a produselor
@@ -757,8 +755,9 @@ const populateDataInCart = (array) => {
     totalPrice.innerHTML = `Proceed to Checkout - Total Price: $${totalPriceFn(array)}`
     totalPrice.addEventListener("click", () => {
         alert("THANK YOU FOR YOUR PURCHASE!")
+        window.scrollTo(0, 0)
         cartArray = [];
-        icon.innerHTML = ""
+        return icon.innerHTML = ""
     })
     cart.appendChild(totalPrice)
     return populatingCartArray

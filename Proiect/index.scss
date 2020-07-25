@@ -5,7 +5,7 @@ $iconColor       :#5469a1;
 $cherryColor     :#DD1048;
 $hoverColor      :rgb(211, 211, 211);
 $light           :rgb(255, 255, 255);
-$shadow          :rgb(141, 141, 141);
+$shadow          :rgb(160, 165, 165);
 
 * {
     color         : #4b4b4b;
@@ -119,7 +119,7 @@ nav {
 
     #logo {
         margin-right: 20px;
-        margin-left : 40px;
+        margin-left : 43px;
         margin-top  : 24px;
     }
 
@@ -311,7 +311,7 @@ nav {
 }
 
 .productDivInfo {
-    margin-top   : 10px;
+    margin-top   : 20px;
     box-shadow   : -3px 1px 9px $light, 4px 3px 12px $shadow;
     border-radius: 10px;
 
@@ -322,22 +322,22 @@ nav {
     height        : 420px;
     width         : 770px;
     padding       : 10px;
+    padding-top:20px;
     margin-bottom : 10px;
     position      : relative;
 
     button {
         background-color: transparent;
         box-shadow      : none;
-        border-bottom   : 1px solid $hoverColor;
         border-radius   : 0;
-        color           : #4b4b4b;
-        padding         : 3px;
+        color           : $iconColor;
+        padding         : 2px;
         margin-top      : 10px;
         margin-right    : 20px;
     }
 
     button:hover {
-        color: $iconColor;
+        color: #4b4b4b;
     }
 
     img {
@@ -502,6 +502,7 @@ nav {
     height         : 50px;
     justify-content: space-between;
     padding        : 0 20px;
+    padding-bottom:2px;
     position       : sticky;
     top            : 59px;
     width          : auto;
@@ -548,7 +549,7 @@ nav {
 
         span {
             font-size      : 14px;
-            color          : $cherryColor;
+            color          : $iconColor;
             text-decoration: underline;
             cursor         : pointer;
             padding-bottom : 5px;
@@ -556,7 +557,7 @@ nav {
         }
 
         span:hover {
-            color: $iconColor;
+            color: $cherryColor;
         }
     }
 
@@ -610,7 +611,8 @@ nav {
         background: $backgroundColor;
         position  : sticky;
         top       : 110px;
-        padding   : 20px 20px;
+        padding   : 10px 20px;
+        padding-top   : 20px;
 
         div {
 
@@ -623,11 +625,12 @@ nav {
             max-height   : 200px;
             padding      : 5px 10px;
             position     : relative;
-            transition   : 0.2s;
+            transition   : 0.25s;
             width        : 190px;
 
             label {
-                font-size: 13px;
+                font-size: 14px;
+                padding-top:2px;
             }
 
             h6 {
@@ -661,11 +664,14 @@ nav {
                 font-size : 16px;
             }
         }
-
+        div:last-of-type{
+            // background-color: red;
+            bottom :0;
+        }
         .minimize {
             max-height: 35px;
             overflow  : hidden;
-            transition: 0.2s;
+            transition: 0.25s;
         }
 
         .rotateClass {
@@ -884,6 +890,8 @@ nav {
     .productDivInfo {
         width : 500px;
         height: 300px;
+        padding-top:10px;
+
     }
 
     #sortByDiv>label {
@@ -912,7 +920,7 @@ nav {
     padding-left       : 35px;
     position           : relative;
     user-select        : none;
-    line-height        : 1.3;
+    line-height        : 1.1;
 }
 
 //hide checkbox
@@ -928,8 +936,8 @@ nav {
 .checkmark {
 
     background-color: $mainColor;
-    border-radius   : 2px;
-    border          : 1.5px solid $buttonColor;
+    border-radius   : 3px;
+    border          : 1px solid $buttonColor;
     height          : 20px;
     left            : 0;
     position        : absolute;
