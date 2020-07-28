@@ -322,7 +322,7 @@ nav {
     height        : 420px;
     width         : 770px;
     padding       : 10px;
-    padding-top:20px;
+    padding-top:15px;
     margin-bottom : 10px;
     position      : relative;
 
@@ -675,7 +675,7 @@ nav {
         }
 
         .rotateClass {
-            transform: rotate(-180deg);
+            transform: rotate(180deg);
         }
 
         div:last-of-type {

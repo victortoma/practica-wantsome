@@ -429,7 +429,7 @@ const populateDataInDom = (array) => {
 
             productDiv.classList.remove("productDiv")
             productDiv.classList.add("productDivInfo")
-            bodyContent.style.display = "none";
+                bodyContent.style.display = "none";
             bodyDiv.appendChild(productDiv)
         })
     }

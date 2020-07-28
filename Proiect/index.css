@@ -388,7 +388,7 @@ nav {
   height: 420px;
   width: 770px;
   padding: 10px;
-  padding-top: 20px;
+  padding-top: 15px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -781,8 +781,8 @@ nav {
 }
 
 .sideBar .sideClass .rotateClass {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sideBar .sideClass div:last-of-type {
